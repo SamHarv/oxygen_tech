@@ -73,8 +73,8 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         Padding(
           padding: const EdgeInsets.all(8),
           child: IconButton(
-            onPressed: () => context.go('/about'),
-            icon: const Icon(Icons.info),
+            onPressed: () => context.go('/contact'),
+            icon: const Icon(Icons.email_outlined),
             color: Colors.black,
           ),
         ),

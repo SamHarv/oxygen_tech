@@ -17,22 +17,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       routerConfig: router,
+      title: 'Oxygen Tech',
     );
   }
 }
 
 //O2Tech
-// Page sized need to be relative to mediaheight for best scrolling experience
-// Complete about page and contact details - add socials - separate about from Contact page
-// Plan out UI to best display the apps using vertical and horizontal rectangles
-//  - When screen is wider, can go 4 verticals across then 2 horizontals below
-// Single page business app (vertical)
-// CHF app (vertical)
-// Booking app (horizontal)
-// MoM app (vertical)
-// Form app (vertical)
-// Digby (horizontal)
-// Add some cool animations
 
 //MoM
 // Fix favourites icon functionality after refresh
@@ -57,3 +47,19 @@ class MyApp extends StatelessWidget {
 // Plan & build
 
 //Once all are built, reach out to family & friends to come up with project
+
+  // <link rel="preload" href="https://oxygentech.com.au/icons/Icon-192.png" as="fetch" crossorigin>
+  // <link rel="preload" href="https://oxygentech.com.au/assets/fonts/MaterialIcons-Regular.otf" as="fetch" crossorigin>
+  // <link rel="preload" href="https://oxygentech.com.au/assets/packages/cupertino_icons/assets/CupertinoIcons.ttf" as="fetch" crossorigin>
+  // <link rel="preload" href="https://oxygentech.com.au/assets/packages/font_awesome_flutter/lib/fonts/fa-brands-400.ttf" as="fetch" crossorigin>
+  // <link rel="preload" href="https://oxygentech.com.au/assets/packages/font_awesome_flutter/lib/fonts/fa-regular-400.ttf" as="fetch" crossorigin>
+  // <link rel="preload" href="https://oxygentech.com.au/assets/packages/font_awesome_flutter/lib/fonts/fa-solid-900.ttf" as="fetch" crossorigin>
+  // <link rel="preload" href="https://oxygentech.com.au/assets/images/screens.png" as="fetch" crossorigin>
+  // <link rel="preload" href="https://oxygentech.com.au/assets/images/2.png" as="fetch" crossorigin>
+  // <link rel="preload" href="https://oxygentech.com.au/assets/images/MoM.png" as="fetch" crossorigin>
+  // <link rel="preload" href="https://oxygentech.com.au/assets/images/digby_screenshot.png" as="fetch" crossorigin>
+  // <link rel="preload" href="https://oxygentech.com.au/assets/images/first.png" as="fetch" crossorigin>
+  // <link rel="preload" href="https://oxygentech.com.au/assets/images/first.png" as="fetch" crossorigin>
+  // <link rel="preload" href="https://oxygentech.com.au/assets/images/pride.png" as="fetch" crossorigin>
+  // <link rel="preload" href="https://oxygentech.com.au/assets/images/1.png" as="fetch" crossorigin>
+  // <link rel="preload" href="https://oxygentech.com.au/assets/images/sam.jpeg" as="fetch" crossorigin>

@@ -11,7 +11,10 @@ class DisplayBox extends StatelessWidget {
   Widget build(BuildContext context) {
     final double mediaWidth = MediaQuery.of(context).size.width;
     return Container(
-      margin: EdgeInsets.only(bottom: mediaWidth * 0.05),
+      margin: EdgeInsets.only(
+        bottom: mediaWidth * 0.025,
+        top: mediaWidth * 0.025,
+      ),
       width: mediaWidth < 750 ? mediaWidth : mediaWidth * 0.9,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(32),

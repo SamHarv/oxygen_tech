@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:oxygen_tech/content/portfolio_content.dart';
 
 import '/constants.dart';
 import '/widgets/custom_appbar.dart';
@@ -10,21 +11,31 @@ class Portfolio extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final double mediaWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       drawer: appDrawer,
       appBar: const CustomAppBar(),
-      body: Center(
-        child: SizedBox(
-          width: mediaWidth * 0.9,
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Image.asset(
-              image,
+      body: Container(
+        width: double.infinity,
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: [
+              Colors.black45.withOpacity(0.7),
+              Colors.black12,
+            ],
+            begin: Alignment.bottomRight,
+            end: Alignment.topLeft,
+          ),
+        ),
+        child: Center(
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: const <Widget>[
+                PortfolioContent(),
+              ],
             ),
           ),
         ),
-        //Add portfolio and contact to home page
       ),
     );
   }

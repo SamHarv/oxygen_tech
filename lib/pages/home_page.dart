@@ -1,27 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:oxygen_tech/widgets/display_box.dart';
-import 'package:url_launcher/url_launcher.dart';
 
+import '/content/about_content.dart';
+import '/content/portfolio_content.dart';
+import '/content/contact_content.dart';
+
+import '/widgets/display_box.dart';
 import '/widgets/custom_appbar.dart';
+
 import '/constants.dart';
-
-final Uri _url = Uri.parse('https://google.com'); //this will be O2 Tech url
-
-Future<void> _launchUrl() async {
-  if (!await launchUrl(_url)) {
-    throw 'Could not launch $_url';
-  }
-}
-
-//async after _sendMail()
-void _sendEmail() {
-  final Uri emailLaunchUri = Uri(
-    scheme: 'mailto',
-    path: 'oxygentech@protonmail.com',
-  );
-  launchUrl(emailLaunchUri);
-  //await before launchUrl
-}
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -51,25 +37,23 @@ class HomePage extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
+                SizedBox(height: mediaWidth * 0.05),
                 SizedBox(
-                  width:
-                      mediaWidth <= 750 ? mediaWidth * 0.8 : mediaWidth * 0.4,
+                  width: mediaWidth <= 750 ? mediaWidth : mediaWidth * 0.6,
                   child: Padding(
                     padding: const EdgeInsets.only(
-                        left: 64, top: 64, right: 64, bottom: 48),
+                        left: 64, top: 64, right: 64, bottom: 64),
                     child: Image.asset(
-                      fullLogo,
+                      'images/screens.png',
                     ),
                   ),
                 ),
-                // Insert some imagery
-                // Look at stock photos for app/ web development
                 const DisplayBox(
                   children: [
                     Padding(
                       padding: kPadding,
                       child: Text(
-                        'What We Do',
+                        'Oxygen Tech',
                         textAlign: TextAlign.center,
                         style: headingStyle,
                       ),
@@ -78,154 +62,86 @@ class HomePage extends StatelessWidget {
                       padding: kPadding,
                       child: Text(
                         //Replace this
-                        'A public jounral of what I perceive to be the more valuable of my ideas.\n\n'
-                        'Why Matter of Movement?\n\n'
-                        'I initially created this webpage to write about movement as it pertains to exercise and physical activity.\n\n'
-                        'I now realise that my interests are far broader.\n\n'
-                        'To enable me to write about whatever I want, here is my justification for continued use of the name:\n\n'
-                        'A complete cessation of movement is death, therefore life consists of continuous movement.\n\n'
-                        'Matters of movement are matters of life.',
+                        'Oxygen Tech, sometimes known as O2Tech offers a service to build simple, performant, multi-platform applications for both mobile (iOS & Android), and web (websites & web apps).\n\n'
+                        'We leverage the Flutter framework\'s multi-platform technology to streamline the process of development which leads to greater efficiency for O2Tech, and cheaper prices for our clients.\n\n'
+                        'We are based on Dja Dja Wurrung Country (Central Victoria), but offer services remotely Australia-wide.\n\n'
+                        'With O2Tech, you will be dealing with the same developer throughout your journey, which will lead to a personalised approach.\n\n'
+                        'If you would like to get in touch and learn more, please scroll down to the Contact section.',
                         style: bodyStyle,
                       ),
                     ),
                   ],
                 ),
-                const DisplayBox(
-                  children: [
-                    gapH12,
-                    Padding(
-                      padding: kPadding,
-                      child: Text(
-                        'Portfolio',
-                        textAlign: TextAlign.center,
-                        style: headingStyle,
-                      ),
+                SizedBox(
+                  width:
+                      mediaWidth <= 750 ? mediaWidth * 0.8 : mediaWidth * 0.4,
+                  child: Padding(
+                    padding: const EdgeInsets.only(
+                        left: 64, top: 64, right: 64, bottom: 64),
+                    child: Image.asset(
+                      fullLogo,
                     ),
-                    Padding(
-                      padding: kPadding,
-                      child: Text(
-                        'Description of demo apps',
-                        style: bodyStyle,
-                      ),
-                    ),
-                    gapH12,
-                  ],
+                  ),
                 ),
-                const DisplayBox(
+                const PortfolioContent(),
+                const AboutContent(),
+                DisplayBox(
                   children: [
                     gapH12,
                     Padding(
                       padding: kPadding,
-                      child: Text(
-                        'About',
-                        textAlign: TextAlign.center,
-                        style: headingStyle,
-                      ),
-                    ),
-                    Padding(
-                      padding: kPadding,
-                      child: Text(
-                        'A public jounral of what I perceive to be the more valuable of my ideas.\n\n'
-                        'Why Matter of Movement?\n\n'
-                        'I initially created this webpage to write about movement as it pertains to exercise and physical activity.\n\n'
-                        'I now realise that my interests are far broader.\n\n'
-                        'To enable me to write about whatever I want, here is my justification for continued use of the name:\n\n'
-                        'A complete cessation of movement is death, therefore life consists of continuous movement.\n\n'
-                        'Matters of movement are matters of life.',
-                        style: bodyStyle,
-                      ),
-                    ),
-                    gapH12,
-                    SizedBox(
-                      child: Padding(
-                        padding: kPadding,
-                        child: CircleAvatar(
-                          backgroundImage: AssetImage(
-                            'images/sam.jpeg',
+                      child: Row(
+                        children: [
+                          SizedBox(
+                            width: 80,
+                            child: Image.asset('images/first.png'),
                           ),
-                          radius: 100,
-                        ),
+                          const SizedBox(width: 24),
+                          SizedBox(
+                            width: 80,
+                            child: Image.asset('images/torres.png'),
+                          ),
+                        ],
                       ),
                     ),
-                    gapH12,
-                  ],
-                ),
-                const DisplayBox(
-                  children: [
-                    gapH12,
-                    Padding(
+                    const Padding(
                       padding: kPadding,
                       child: Text(
-                        'Acknowledgement of Country',
-                        textAlign: TextAlign.center,
-                        style: headingStyle,
-                      ),
-                    ),
-                    Padding(
-                      padding: kPadding,
-                      child: Text(
-                        'Description of demo apps',
+                        'Oxygen Tech acknowledges the Traditional Owners of the land, sea and waters of the areas we live and work on across Australia. We acknowledge their continuing connection to their culture and pay our respects to their Elders past and present.',
                         style: bodyStyle,
                       ),
                     ),
                     gapH12,
                   ],
                 ),
-                const DisplayBox(
+                DisplayBox(
                   children: [
                     gapH12,
                     Padding(
                       padding: kPadding,
-                      child: Text(
-                        'Diversity',
-                        textAlign: TextAlign.center,
-                        style: headingStyle,
+                      child: Row(
+                        children: [
+                          SizedBox(
+                            width: 80,
+                            child: Image.asset('images/pride.png'),
+                          ),
+                        ],
                       ),
                     ),
-                    Padding(
+                    const Padding(
                       padding: kPadding,
-                      child: Text(
-                        'Description of demo apps',
-                        style: bodyStyle,
-                      ),
-                    ),
-                    gapH12,
-                  ],
-                ),
-                const DisplayBox(
-                  children: [
-                    gapH12,
-                    Padding(
-                      padding: kPadding,
-                      child: Text(
-                        'Contact',
-                        textAlign: TextAlign.center,
-                        style: headingStyle,
-                      ),
-                    ),
-                    Padding(
-                      padding: kPadding,
-                      child: Text(
-                        'Sam Harvey\n\n'
-                        'Director\n\n'
-                        'Oxygen Tech\n',
-                        textAlign: TextAlign.center,
-                        style: bodyStyle,
-                      ),
-                    ),
-                    gapH12,
-                    Padding(
-                      padding: kPadding,
-                      child: TextButton(
-                        onPressed: _sendEmail,
+                      child: Align(
+                        alignment: Alignment.centerLeft,
                         child: Text(
-                          'oxygentech@protonmail.com\n',
+                          'Oxygen Tech is committed to embracing diversity and welcomes all people.',
                           style: bodyStyle,
                         ),
                       ),
                     ),
+                    gapH12,
                   ],
                 ),
+                const ContactContent(),
               ],
             ),
           ),
