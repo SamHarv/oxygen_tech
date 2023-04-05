@@ -1,6 +1,5 @@
+import 'package:beamer/beamer.dart';
 import 'package:flutter/material.dart';
-
-import 'package:go_router/go_router.dart';
 
 import './appbar_menu_item.dart';
 
@@ -32,7 +31,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                   fit: BoxFit.contain,
                   height: 50.0,
                 ),
-                onTap: () => context.go('/'),
+                onTap: () => Beamer.of(context).beamToNamed('/'),
               )
             : Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -64,7 +63,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                       fit: BoxFit.contain,
                       height: 50.0,
                     ),
-                    onTap: () => context.go('/'),
+                    onTap: () => Beamer.of(context).beamToNamed('/'),
                   ),
                 ],
               ),
@@ -73,7 +72,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         Padding(
           padding: const EdgeInsets.all(8),
           child: IconButton(
-            onPressed: () => context.go('/contact'),
+            onPressed: () => Beamer.of(context).beamToNamed('/contact'),
             icon: const Icon(Icons.email_outlined),
             color: Colors.black,
           ),

@@ -1,5 +1,5 @@
+import 'package:beamer/beamer.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -126,7 +126,7 @@ class ContactContent extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             TextButton(
-              onPressed: () => context.go('/privacy'),
+              onPressed: () => Beamer.of(context).beamToNamed('/privacy'),
               child: const Text(
                 'Privacy Policy',
                 style: TextStyle(
@@ -137,7 +137,7 @@ class ContactContent extends StatelessWidget {
             ),
             const SizedBox(width: 12),
             TextButton(
-              onPressed: () => context.go('/terms'),
+              onPressed: () => Beamer.of(context).beamToNamed('/terms'),
               child: const Text(
                 'Terms of Use',
                 style: TextStyle(

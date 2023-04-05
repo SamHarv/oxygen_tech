@@ -1,8 +1,7 @@
+import 'package:beamer/beamer.dart';
 import 'package:flutter/material.dart';
 
 import '../constants.dart';
-
-import 'package:go_router/go_router.dart';
 
 class AppDrawer extends StatelessWidget {
   const AppDrawer({super.key});
@@ -30,65 +29,67 @@ class AppDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
       backgroundColor: thirdColor,
-      child: Column(
-        children: [
-          Container(
-            width: double.infinity,
-            padding: const EdgeInsets.all(30),
-            color: thirdColor,
-            child: Image.asset(fullLogo),
-          ),
-          const Divider(),
-          buildListTile(
-            'Home',
-            Icons.home,
-            () => context.go('/'),
-          ),
-          const Divider(),
-          buildListTile(
-            'Portfolio',
-            Icons.apps,
-            () => context.go('/portfolio'),
-          ),
-          const Divider(),
-          buildListTile(
-            'About',
-            Icons.info,
-            () => context.go('/about'),
-          ),
-          const Divider(),
-          buildListTile(
-            'Contact',
-            Icons.email,
-            () => context.go('/contact'),
-          ),
-          const Divider(),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              TextButton(
-                onPressed: () => context.go('/privacy'),
-                child: const Text(
-                  'Privacy Policy',
-                  style: TextStyle(
-                    color: kColor,
-                    decoration: TextDecoration.underline,
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            Container(
+              width: double.infinity,
+              padding: const EdgeInsets.all(30),
+              color: thirdColor,
+              child: Image.asset(fullLogo),
+            ),
+            const Divider(),
+            buildListTile(
+              'Home',
+              Icons.home,
+              () => Beamer.of(context).beamToNamed('/'),
+            ),
+            const Divider(),
+            buildListTile(
+              'Portfolio',
+              Icons.apps,
+              () => Beamer.of(context).beamToNamed('/portfolio'),
+            ),
+            const Divider(),
+            buildListTile(
+              'About',
+              Icons.info,
+              () => Beamer.of(context).beamToNamed('/about'),
+            ),
+            const Divider(),
+            buildListTile(
+              'Contact',
+              Icons.email,
+              () => Beamer.of(context).beamToNamed('/contact'),
+            ),
+            const Divider(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                TextButton(
+                  onPressed: () => Beamer.of(context).beamToNamed('/privacy'),
+                  child: const Text(
+                    'Privacy Policy',
+                    style: TextStyle(
+                      color: kColor,
+                      decoration: TextDecoration.underline,
+                    ),
                   ),
                 ),
-              ),
-              TextButton(
-                onPressed: () => context.go('/terms'),
-                child: const Text(
-                  'Terms of Use',
-                  style: TextStyle(
-                    color: kColor,
-                    decoration: TextDecoration.underline,
+                TextButton(
+                  onPressed: () => Beamer.of(context).beamToNamed('/terms'),
+                  child: const Text(
+                    'Terms of Use',
+                    style: TextStyle(
+                      color: kColor,
+                      decoration: TextDecoration.underline,
+                    ),
                   ),
                 ),
-              ),
-            ],
-          ),
-        ],
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }

@@ -1,99 +1,66 @@
 import 'package:flutter/widgets.dart';
-import 'package:go_router/go_router.dart';
+import 'package:beamer/beamer.dart';
 
-import '/pages/privacy.dart';
+import 'pages/privacy.dart';
 import 'pages/home_page.dart';
 import 'pages/portfolio.dart';
 import 'pages/about.dart';
 import 'pages/contact.dart';
 import 'pages/terms.dart';
 
-final router = GoRouter(
-  initialLocation: '/',
-  routes: [
-    GoRoute(
-      path: '/',
-      pageBuilder: (context, state) => CustomTransitionPage(
-        transitionDuration: const Duration(seconds: 1),
-        key: state.pageKey,
-        child: const HomePage(),
-        transitionsBuilder: (context, animation, secondaryAnimation, child) {
-          return FadeTransition(
-            opacity: CurveTween(curve: Curves.easeIn).animate(animation),
-            child: const HomePage(),
-          );
-        },
-      ),
-    ),
-    GoRoute(
-      path: '/portfolio',
-      pageBuilder: (context, state) => CustomTransitionPage(
-        transitionDuration: const Duration(seconds: 1),
-        key: state.pageKey,
-        child: const Portfolio(),
-        transitionsBuilder: (context, animation, secondaryAnimation, child) {
-          return FadeTransition(
-            opacity: CurveTween(curve: Curves.easeIn).animate(animation),
-            child: const Portfolio(),
-          );
-        },
-      ),
-    ),
-    GoRoute(
-      path: '/about',
-      pageBuilder: (context, state) => CustomTransitionPage(
-        transitionDuration: const Duration(seconds: 1),
-        key: state.pageKey,
-        child: const AboutPage(),
-        transitionsBuilder: (context, animation, secondaryAnimation, child) {
-          return FadeTransition(
-            opacity: CurveTween(curve: Curves.easeIn).animate(animation),
-            child: const AboutPage(),
-          );
-        },
-      ),
-    ),
-    GoRoute(
-      path: '/contact',
-      pageBuilder: (context, state) => CustomTransitionPage(
-        transitionDuration: const Duration(seconds: 1),
-        key: state.pageKey,
-        child: const ContactPage(),
-        transitionsBuilder: (context, animation, secondaryAnimation, child) {
-          return FadeTransition(
-            opacity: CurveTween(curve: Curves.easeIn).animate(animation),
-            child: const ContactPage(),
-          );
-        },
-      ),
-    ),
-    GoRoute(
-      path: '/privacy',
-      pageBuilder: (context, state) => CustomTransitionPage(
-        transitionDuration: const Duration(seconds: 1),
-        key: state.pageKey,
-        child: const Privacy(),
-        transitionsBuilder: (context, animation, secondaryAnimation, child) {
-          return FadeTransition(
-            opacity: CurveTween(curve: Curves.easeIn).animate(animation),
-            child: const Privacy(),
-          );
-        },
-      ),
-    ),
-    GoRoute(
-      path: '/terms',
-      pageBuilder: (context, state) => CustomTransitionPage(
-        transitionDuration: const Duration(seconds: 1),
-        key: state.pageKey,
-        child: const Terms(),
-        transitionsBuilder: (context, animation, secondaryAnimation, child) {
-          return FadeTransition(
-            opacity: CurveTween(curve: Curves.easeIn).animate(animation),
-            child: const Terms(),
-          );
-        },
-      ),
-    ),
-  ],
+final routerDelegate = BeamerDelegate(
+  notFoundRedirectNamed: '/',
+  initialPath: '/',
+  locationBuilder: RoutesLocationBuilder(
+    routes: {
+      '/': (context, state, data) {
+        return const BeamPage(
+          key: ValueKey(''),
+          type: BeamPageType.fadeTransition,
+          title: 'Oxygen Tech',
+          child: HomePage(),
+        );
+      },
+      '/portfolio': (context, state, data) {
+        return const BeamPage(
+          key: ValueKey('portfolio'),
+          type: BeamPageType.fadeTransition,
+          title: 'Portfolio - Oxygen Tech',
+          child: Portfolio(),
+        );
+      },
+      '/about': (context, state, data) {
+        return const BeamPage(
+          key: ValueKey('about'),
+          type: BeamPageType.fadeTransition,
+          title: 'About - Oxygen Tech',
+          child: AboutPage(),
+        );
+      },
+      '/contact': (context, state, data) {
+        return const BeamPage(
+          key: ValueKey('contact'),
+          type: BeamPageType.fadeTransition,
+          title: 'Contact - Oxygen Tech',
+          child: ContactPage(),
+        );
+      },
+      '/privacy': (context, state, data) {
+        return const BeamPage(
+          key: ValueKey('privacy'),
+          type: BeamPageType.fadeTransition,
+          title: 'Privacy Policy - Oxygen Tech',
+          child: Privacy(),
+        );
+      },
+      '/terms': (context, state, data) {
+        return const BeamPage(
+          key: ValueKey('terms'),
+          type: BeamPageType.fadeTransition,
+          title: 'Terms & Conditions - Oxygen Tech',
+          child: Terms(),
+        );
+      },
+    },
+  ),
 );
