@@ -31,11 +31,6 @@ class MyApp extends StatelessWidget {
 // Fix favourites icon functionality after refresh
 
 //Digby
-// Replace boosters (chrome can, blue chocolate bar, burger)
-// Add texture to barriers and round the corners
-// Get Domain name
-// Add URL strategy
-// Publish to PlayStore & AppStore
 
 //CHF app
 // Finish planning and build
