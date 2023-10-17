@@ -26,11 +26,11 @@ class Portfolio extends StatelessWidget {
             end: Alignment.topLeft,
           ),
         ),
-        child: Center(
+        child: const Center(
           child: SingleChildScrollView(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: const <Widget>[
+              children: <Widget>[
                 PortfolioContent(),
               ],
             ),

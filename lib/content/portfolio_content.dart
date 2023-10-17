@@ -9,7 +9,7 @@ import '/constants.dart';
 
 final Uri _moMUrl = Uri.parse('https://matterofmovement.com.au');
 final Uri _digbyUrl = Uri.parse('https://digbygame.com.au');
-final Uri _brighter_tomorrowUrl = Uri.parse('https://brightertomorrow.com.au');
+final Uri _brighterTomorrowUrl = Uri.parse('https://brightertomorrow.com.au');
 
 Future<void> _launchMoMUrl() async {
   if (!await launchUrl(_moMUrl)) {
@@ -24,8 +24,8 @@ Future<void> _launchDigbyUrl() async {
 }
 
 Future<void> _launchBrighterTomorrowUrl() async {
-  if (!await launchUrl(_brighter_tomorrowUrl)) {
-    throw 'Could not launch $_brighter_tomorrowUrl';
+  if (!await launchUrl(_brighterTomorrowUrl)) {
+    throw 'Could not launch $_brighterTomorrowUrl';
   }
 }
 

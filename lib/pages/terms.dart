@@ -10,14 +10,14 @@ class Terms extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: const CustomAppBar(),
-      drawer: const AppDrawer(),
+    return const Scaffold(
+      appBar: CustomAppBar(),
+      drawer: AppDrawer(),
       body: Center(
         child: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
-            children: const <Widget>[
+            children: <Widget>[
               Padding(
                 padding: EdgeInsets.only(
                   left: 32,
