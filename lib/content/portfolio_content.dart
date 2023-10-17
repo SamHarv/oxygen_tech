@@ -9,6 +9,7 @@ import '/constants.dart';
 
 final Uri _moMUrl = Uri.parse('https://matterofmovement.com.au');
 final Uri _digbyUrl = Uri.parse('https://digbygame.com.au');
+final Uri _brighter_tomorrowUrl = Uri.parse('https://brightertomorrow.com.au');
 
 Future<void> _launchMoMUrl() async {
   if (!await launchUrl(_moMUrl)) {
@@ -19,6 +20,12 @@ Future<void> _launchMoMUrl() async {
 Future<void> _launchDigbyUrl() async {
   if (!await launchUrl(_digbyUrl)) {
     throw 'Could not launch $_digbyUrl';
+  }
+}
+
+Future<void> _launchBrighterTomorrowUrl() async {
+  if (!await launchUrl(_brighter_tomorrowUrl)) {
+    throw 'Could not launch $_brighter_tomorrowUrl';
   }
 }
 
@@ -54,6 +61,22 @@ class PortfolioContent extends StatelessWidget {
             ? Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
+                  const Padding(
+                    padding: kPadding,
+                    child: Text(
+                      'Brighter Tomorrow',
+                      textAlign: TextAlign.center,
+                      style: headingStyle,
+                    ),
+                  ),
+                  gapH12,
+                  VerticalAppCard(
+                    onPressed: _launchBrighterTomorrowUrl,
+                    screenshot: 'images/brighter_tomorrow.png',
+                    title: 'Brighter Tomorrow',
+                    height:
+                        mediaWidth < 750 ? mediaWidth * 0.9 : mediaWidth * 0.8,
+                  ),
                   const Padding(
                     padding: kPadding,
                     child: Text(
@@ -94,6 +117,23 @@ class PortfolioContent extends StatelessWidget {
                 children: [
                   Column(
                     children: [
+                      const Padding(
+                        padding: kPadding,
+                        child: Text(
+                          'Brighter Tomorrow',
+                          textAlign: TextAlign.center,
+                          style: headingStyle,
+                        ),
+                      ),
+                      gapH12,
+                      VerticalAppCard(
+                        onPressed: _launchBrighterTomorrowUrl,
+                        screenshot: 'images/brighter_tomorrow.png',
+                        title: 'Brighter Tomorrow',
+                        height: mediaWidth < 750
+                            ? (mediaWidth * 0.45) - 48
+                            : (mediaWidth * 0.4) - 48,
+                      ),
                       const Padding(
                         padding: kPadding,
                         child: Text(

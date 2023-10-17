@@ -9,11 +9,11 @@ import 'pages/contact.dart';
 import 'pages/terms.dart';
 
 final routerDelegate = BeamerDelegate(
-  notFoundRedirectNamed: '/',
-  initialPath: '/',
+  notFoundRedirectNamed: '/home',
+  initialPath: '/home',
   locationBuilder: RoutesLocationBuilder(
     routes: {
-      '/': (context, state, data) {
+      '/home': (context, state, data) {
         return const BeamPage(
           key: ValueKey(''),
           type: BeamPageType.fadeTransition,
