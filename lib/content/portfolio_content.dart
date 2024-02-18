@@ -7,9 +7,18 @@ import '/widgets/display_box.dart';
 
 import '/constants.dart';
 
+final Uri _plansUrl = Uri.parse(
+    'https://play.google.com/store/apps/details?id=com.o2tech.plans&pcampaignid=web_share');
 final Uri _moMUrl = Uri.parse('https://matterofmovement.com.au');
-final Uri _digbyUrl = Uri.parse('https://digbygame.com.au');
+final Uri _digbyUrl = Uri.parse(
+    'https://play.google.com/store/apps/details?id=com.samharvey.digby&pcampaignid=web_share');
 final Uri _brighterTomorrowUrl = Uri.parse('https://brightertomorrow.com.au');
+
+Future<void> _launchPlansUrl() async {
+  if (!await launchUrl(_plansUrl)) {
+    throw 'Could not launch $_plansUrl';
+  }
+}
 
 Future<void> _launchMoMUrl() async {
   if (!await launchUrl(_moMUrl)) {
@@ -61,6 +70,22 @@ class PortfolioContent extends StatelessWidget {
             ? Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
+                  const Padding(
+                    padding: kPadding,
+                    child: Text(
+                      'Plans',
+                      textAlign: TextAlign.center,
+                      style: headingStyle,
+                    ),
+                  ),
+                  gapH12,
+                  VerticalAppCard(
+                    onPressed: _launchPlansUrl,
+                    screenshot: 'images/plans_screenshot.png',
+                    title: 'Plans',
+                    height:
+                        mediaWidth < 750 ? mediaWidth * 0.9 : mediaWidth * 0.8,
+                  ),
                   const Padding(
                     padding: kPadding,
                     child: Text(
@@ -120,16 +145,16 @@ class PortfolioContent extends StatelessWidget {
                       const Padding(
                         padding: kPadding,
                         child: Text(
-                          'Brighter Tomorrow',
+                          'Plans',
                           textAlign: TextAlign.center,
                           style: headingStyle,
                         ),
                       ),
                       gapH12,
                       VerticalAppCard(
-                        onPressed: _launchBrighterTomorrowUrl,
-                        screenshot: 'images/brighter_tomorrow.png',
-                        title: 'Brighter Tomorrow',
+                        onPressed: _launchPlansUrl,
+                        screenshot: 'images/plans_screenshot.png',
+                        title: 'Plans',
                         height: mediaWidth < 750
                             ? (mediaWidth * 0.45) - 48
                             : (mediaWidth * 0.4) - 48,
@@ -155,6 +180,23 @@ class PortfolioContent extends StatelessWidget {
                   ),
                   Column(
                     children: [
+                      const Padding(
+                        padding: kPadding,
+                        child: Text(
+                          'Brighter Tomorrow',
+                          textAlign: TextAlign.center,
+                          style: headingStyle,
+                        ),
+                      ),
+                      gapH12,
+                      VerticalAppCard(
+                        onPressed: _launchBrighterTomorrowUrl,
+                        screenshot: 'images/brighter_tomorrow.png',
+                        title: 'Brighter Tomorrow',
+                        height: mediaWidth < 750
+                            ? (mediaWidth * 0.45) - 48
+                            : (mediaWidth * 0.4) - 48,
+                      ),
                       const Padding(
                         padding: kPadding,
                         child: Text(
