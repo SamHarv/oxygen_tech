@@ -20,7 +20,7 @@ class VerticalAppCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: kPadding,
-      child: GestureDetector(
+      child: InkWell(
         onTap: () => onPressed(),
         child: Material(
           borderRadius: BorderRadius.circular(32),

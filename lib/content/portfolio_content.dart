@@ -12,6 +12,7 @@ final Uri _plansUrl = Uri.parse(
 final Uri _moMUrl = Uri.parse('https://matterofmovement.com.au');
 final Uri _digbyUrl = Uri.parse(
     'https://play.google.com/store/apps/details?id=com.samharvey.digby&pcampaignid=web_share');
+final Uri _digbyWebUrl = Uri.parse('https://digbygame.com.au');
 final Uri _brighterTomorrowUrl = Uri.parse('https://brightertomorrow.com.au');
 
 Future<void> _launchPlansUrl() async {
@@ -29,6 +30,12 @@ Future<void> _launchMoMUrl() async {
 Future<void> _launchDigbyUrl() async {
   if (!await launchUrl(_digbyUrl)) {
     throw 'Could not launch $_digbyUrl';
+  }
+}
+
+Future<void> _launchDigbyWebUrl() async {
+  if (!await launchUrl(_digbyWebUrl)) {
+    throw 'Could not launch $_digbyWebUrl';
   }
 }
 
@@ -60,7 +67,8 @@ class PortfolioContent extends StatelessWidget {
         const Padding(
           padding: kPadding,
           child: Text(
-            'Click the tile to test the app through your browser.',
+            'Click the tile to test the app through your browser or be '
+            'directed to the Play Store.',
             textAlign: TextAlign.center,
             style: bodyStyle,
           ),
@@ -129,12 +137,24 @@ class PortfolioContent extends StatelessWidget {
                   ),
                   gapH12,
                   HorizontalAppCard(
-                      onPressed: _launchDigbyUrl,
-                      screenshot: 'images/digby_screenshot.png',
-                      title: 'Digby',
-                      width: mediaWidth < 750
-                          ? mediaWidth * 0.9
-                          : mediaWidth * 0.8),
+                    onPressed: _launchDigbyUrl,
+                    screenshot: 'images/digby_screenshot.png',
+                    title: 'Digby',
+                    width:
+                        mediaWidth < 750 ? mediaWidth * 0.9 : mediaWidth * 0.8,
+                  ),
+                  gapH12,
+                  const TextButton(
+                    onPressed: _launchDigbyWebUrl,
+                    child: Text(
+                      'Play Digby in your browser',
+                      style: TextStyle(
+                        fontSize: 16.0,
+                        color: kColor,
+                        decoration: TextDecoration.underline,
+                      ),
+                    ),
+                  ),
                 ],
               )
             : Row(
@@ -213,6 +233,18 @@ class PortfolioContent extends StatelessWidget {
                         width: mediaWidth < 750
                             ? (mediaWidth * 0.45) - 48
                             : (mediaWidth * 0.4) - 48,
+                      ),
+                      gapH12,
+                      const TextButton(
+                        onPressed: _launchDigbyWebUrl,
+                        child: Text(
+                          'Play Digby in your browser',
+                          style: TextStyle(
+                            fontSize: 16.0,
+                            color: kColor,
+                            decoration: TextDecoration.underline,
+                          ),
+                        ),
                       ),
                     ],
                   ),
