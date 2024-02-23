@@ -66,7 +66,6 @@ class PortfolioContent extends StatelessWidget {
             child: Text(
               'Click the tile to test the app through your browser or be '
               'directed to the Play Store.',
-              textAlign: TextAlign.center,
               style: bodyStyle,
             ),
           ),
