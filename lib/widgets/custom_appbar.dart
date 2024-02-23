@@ -1,17 +1,15 @@
 import 'package:beamer/beamer.dart';
 import 'package:flutter/material.dart';
 
+import '/constants.dart';
 import './appbar_menu_item.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppBar({
     Key? key,
-    //required this.id,
   }) : super(key: key);
   @override
   Size get preferredSize => const Size.fromHeight(60.0);
-
-  final String image = 'images/1.png';
 
   @override
   Widget build(BuildContext context) {
@@ -27,57 +25,106 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         child: mediaWidth < 750
             ? InkWell(
                 child: Image.asset(
-                  image,
+                  logo,
                   fit: BoxFit.contain,
                   height: 50.0,
                 ),
                 onTap: () => Beamer.of(context).beamToNamed('/'),
               )
-            : Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  const Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      AppBarMenuItem(
-                        title: 'Home',
-                        route: '/',
+            : SizedBox(
+                width: mediaWidth,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    InkWell(
+                      child: Image.asset(
+                        fullLogo,
+                        fit: BoxFit.contain,
+                        height: 40.0,
                       ),
-                      AppBarMenuItem(
-                        title: 'Portfolio',
-                        route: '/portfolio',
-                      ),
-                      AppBarMenuItem(
-                        title: 'About',
-                        route: '/about',
-                      ),
-                      AppBarMenuItem(
-                        title: 'Contact',
-                        route: '/contact',
-                      ),
-                    ],
-                  ),
-                  InkWell(
-                    child: Image.asset(
-                      image,
-                      fit: BoxFit.contain,
-                      height: 50.0,
+                      onTap: () => Beamer.of(context).beamToNamed('/'),
                     ),
-                    onTap: () => Beamer.of(context).beamToNamed('/'),
-                  ),
-                ],
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        const SizedBox(
+                          width: 20,
+                        ),
+                        const AppBarMenuItem(
+                          title: 'Home',
+                          route: '/',
+                        ),
+                        const AppBarMenuItem(
+                          title: 'Portfolio',
+                          route: '/portfolio',
+                        ),
+                        const AppBarMenuItem(
+                          title: 'About',
+                          route: '/about',
+                        ),
+                        const AppBarMenuItem(
+                          title: 'Contact',
+                          route: '/contact',
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(16),
+                          child: PopupMenuButton<String>(
+                            color: Colors.white,
+                            child: const Text(
+                              'Legal',
+                              style: TextStyle(
+                                // fontSize: 20.0,
+                                color: kColor,
+                              ),
+                            ),
+                            itemBuilder: (BuildContext context) {
+                              return [
+                                const PopupMenuItem<String>(
+                                  value: 'privacy',
+                                  child: Text(
+                                    'Privacy Policy',
+                                    style: TextStyle(color: kColor),
+                                  ),
+                                ),
+                                const PopupMenuItem<String>(
+                                  value: 'terms',
+                                  child: Text(
+                                    'Terms & Conditions',
+                                    style: TextStyle(color: kColor),
+                                  ),
+                                ),
+                              ];
+                            },
+                            onSelected: (value) {
+                              // Handle the selected item here
+                              if (value == 'privacy') {
+                                Beamer.of(context).beamToNamed('/privacy');
+                              } else if (value == 'terms') {
+                                Beamer.of(context).beamToNamed('/terms');
+                              }
+                            },
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
               ),
       ),
-      actions: [
-        Padding(
-          padding: const EdgeInsets.all(8),
-          child: IconButton(
-            onPressed: () => Beamer.of(context).beamToNamed('/contact'),
-            icon: const Icon(Icons.email_outlined),
-            color: Colors.black,
-          ),
-        ),
-      ],
+      actions: mediaWidth > 750
+          ? null
+          : [
+              Padding(
+                padding: const EdgeInsets.all(8),
+                child: IconButton(
+                  onPressed: () => Beamer.of(context).beamToNamed('/contact'),
+                  icon: const Icon(Icons.email_outlined),
+                  color: Colors.black,
+                ),
+              ),
+            ],
     );
   }
 }

@@ -89,7 +89,7 @@ class PortfolioContent extends StatelessWidget {
                   gapH12,
                   VerticalAppCard(
                     onPressed: _launchPlansUrl,
-                    screenshot: 'images/plans_screenshot.png',
+                    screenshot: 'images/plans_tile.png',
                     title: 'Plans',
                     height:
                         mediaWidth < 750 ? mediaWidth * 0.9 : mediaWidth * 0.8,
@@ -105,7 +105,7 @@ class PortfolioContent extends StatelessWidget {
                   gapH12,
                   VerticalAppCard(
                     onPressed: _launchBrighterTomorrowUrl,
-                    screenshot: 'images/brighter_tomorrow.png',
+                    screenshot: 'images/brighter_tomorrow_tile.png',
                     title: 'Brighter Tomorrow',
                     height:
                         mediaWidth < 750 ? mediaWidth * 0.9 : mediaWidth * 0.8,
@@ -121,7 +121,7 @@ class PortfolioContent extends StatelessWidget {
                   gapH12,
                   VerticalAppCard(
                     onPressed: _launchMoMUrl,
-                    screenshot: 'images/MoM.png',
+                    screenshot: 'images/MoM_tile_dark.png',
                     title: 'Matter of Movement',
                     height:
                         mediaWidth < 750 ? mediaWidth * 0.9 : mediaWidth * 0.8,
@@ -138,7 +138,7 @@ class PortfolioContent extends StatelessWidget {
                   gapH12,
                   HorizontalAppCard(
                     onPressed: _launchDigbyUrl,
-                    screenshot: 'images/digby_screenshot.png',
+                    screenshot: 'images/digby_tile.png',
                     title: 'Digby',
                     width:
                         mediaWidth < 750 ? mediaWidth * 0.9 : mediaWidth * 0.8,
@@ -173,7 +173,7 @@ class PortfolioContent extends StatelessWidget {
                       gapH12,
                       VerticalAppCard(
                         onPressed: _launchPlansUrl,
-                        screenshot: 'images/plans_screenshot.png',
+                        screenshot: 'images/plans_tile.png',
                         title: 'Plans',
                         height: mediaWidth < 750
                             ? (mediaWidth * 0.45) - 48
@@ -190,7 +190,7 @@ class PortfolioContent extends StatelessWidget {
                       gapH12,
                       VerticalAppCard(
                         onPressed: _launchMoMUrl,
-                        screenshot: 'images/MoM.png',
+                        screenshot: 'images/MoM_tile_dark.png',
                         title: 'Matter of Movement',
                         height: mediaWidth < 750
                             ? (mediaWidth * 0.45) - 48
@@ -211,7 +211,7 @@ class PortfolioContent extends StatelessWidget {
                       gapH12,
                       VerticalAppCard(
                         onPressed: _launchBrighterTomorrowUrl,
-                        screenshot: 'images/brighter_tomorrow.png',
+                        screenshot: 'images/brighter_tomorrow_tile.png',
                         title: 'Brighter Tomorrow',
                         height: mediaWidth < 750
                             ? (mediaWidth * 0.45) - 48
@@ -228,7 +228,7 @@ class PortfolioContent extends StatelessWidget {
                       gapH12,
                       HorizontalAppCard(
                         onPressed: _launchDigbyUrl,
-                        screenshot: 'images/digby_screenshot.png',
+                        screenshot: 'images/digby_tile.png',
                         title: 'Digby',
                         width: mediaWidth < 750
                             ? (mediaWidth * 0.45) - 48
