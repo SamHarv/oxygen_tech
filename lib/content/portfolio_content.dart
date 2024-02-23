@@ -179,7 +179,6 @@ class PortfolioContent extends StatelessWidget {
                         gapH32,
                       ],
                     ),
-                    gapW32,
                     Column(
                       children: [
                         gapH32,
