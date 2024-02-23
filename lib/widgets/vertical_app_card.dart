@@ -22,34 +22,9 @@ class VerticalAppCard extends StatelessWidget {
       padding: kPadding,
       child: InkWell(
         onTap: () => onPressed(),
-        child: Material(
-          borderRadius: BorderRadius.circular(32),
-          elevation: 6,
-          child: SizedBox(
-            height: height,
-            child: Flex(
-              direction: Axis.vertical,
-              children: [
-                Expanded(
-                  child: Container(
-                    decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(32),
-                      ),
-                    ),
-                    child: ClipRRect(
-                      borderRadius: const BorderRadius.all(
-                        Radius.circular(32),
-                      ),
-                      child: Image.asset(
-                        screenshot,
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
+        child: Image.asset(
+          screenshot,
+          height: height,
         ),
       ),
     );

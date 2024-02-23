@@ -22,34 +22,9 @@ class HorizontalAppCard extends StatelessWidget {
       padding: kPadding,
       child: InkWell(
         onTap: () => onPressed(),
-        child: Material(
-          borderRadius: BorderRadius.circular(32),
-          elevation: 6,
-          child: SizedBox(
-            width: width,
-            child: Flex(
-              direction: Axis.horizontal,
-              children: [
-                Expanded(
-                  child: Container(
-                    decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(32),
-                      ),
-                    ),
-                    child: ClipRRect(
-                      borderRadius: const BorderRadius.all(
-                        Radius.circular(32),
-                      ),
-                      child: Image.asset(
-                        screenshot,
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
+        child: Image.asset(
+          screenshot,
+          width: width,
         ),
       ),
     );

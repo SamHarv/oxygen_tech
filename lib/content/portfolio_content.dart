@@ -78,6 +78,7 @@ class PortfolioContent extends StatelessWidget {
             ? Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
+                  gapH12,
                   const Padding(
                     padding: kPadding,
                     child: Text(
@@ -94,6 +95,7 @@ class PortfolioContent extends StatelessWidget {
                     height:
                         mediaWidth < 750 ? mediaWidth * 0.9 : mediaWidth * 0.8,
                   ),
+                  gapH12,
                   const Padding(
                     padding: kPadding,
                     child: Text(
@@ -110,6 +112,7 @@ class PortfolioContent extends StatelessWidget {
                     height:
                         mediaWidth < 750 ? mediaWidth * 0.9 : mediaWidth * 0.8,
                   ),
+                  gapH12,
                   const Padding(
                     padding: kPadding,
                     child: Text(
@@ -179,6 +182,7 @@ class PortfolioContent extends StatelessWidget {
                             ? (mediaWidth * 0.45) - 48
                             : (mediaWidth * 0.4) - 48,
                       ),
+                      gapH12,
                       const Padding(
                         padding: kPadding,
                         child: Text(
@@ -217,6 +221,7 @@ class PortfolioContent extends StatelessWidget {
                             ? (mediaWidth * 0.45) - 48
                             : (mediaWidth * 0.4) - 48,
                       ),
+                      gapH12,
                       const Padding(
                         padding: kPadding,
                         child: Text(
