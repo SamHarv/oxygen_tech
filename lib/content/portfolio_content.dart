@@ -145,6 +145,7 @@ class PortfolioContent extends StatelessWidget {
                 )
               : Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  // mainAxisSize: MainAxisSize.max,
                   children: [
                     gapW32,
                     Column(
@@ -177,8 +178,17 @@ class PortfolioContent extends StatelessWidget {
                               : (mediaWidth * 0.4) - 48,
                         ),
                         gapH32,
+                        // Remove the below SizedBox when another landscape app
+                        // is added to the portfolio. This helps align the
+                        // design
+                        SizedBox(
+                          width: mediaWidth < 750
+                              ? (mediaWidth * 0.45) - 48
+                              : (mediaWidth * 0.4) - 48,
+                        ),
                       ],
                     ),
+                    gapW32,
                     Column(
                       children: [
                         gapH32,
@@ -224,6 +234,7 @@ class PortfolioContent extends StatelessWidget {
                         gapH32,
                       ],
                     ),
+                    gapW32,
                   ],
                 ),
         ],
