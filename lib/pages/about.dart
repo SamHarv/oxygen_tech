@@ -26,12 +26,7 @@ class AboutPage extends StatelessWidget {
         ),
         child: const Center(
           child: SingleChildScrollView(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: <Widget>[
-                AboutContent(),
-              ],
-            ),
+            child: AboutContent(),
           ),
         ),
       ),

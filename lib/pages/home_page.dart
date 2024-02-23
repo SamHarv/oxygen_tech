@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import '/content/about_content.dart';
 import '/content/portfolio_content.dart';
 import '/content/contact_content.dart';
-
 import '/widgets/display_box.dart';
 import '/widgets/custom_appbar.dart';
-
 import '/constants.dart';
 
 class HomePage extends StatelessWidget {
@@ -30,47 +28,35 @@ class HomePage extends StatelessWidget {
             end: Alignment.topLeft,
           ),
         ),
-        child: Center(
-          child: Stack(
-            alignment: Alignment.center,
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(64),
-                child: Image.asset(
-                  logo,
-                  width:
-                      mediaWidth <= 750 ? mediaWidth * 0.8 : mediaWidth * 0.4,
-                ),
-              ),
-              SingleChildScrollView(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: <Widget>[
-                    SizedBox(
-                      height: mediaWidth * 0.025,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(32),
-                      child: Image.asset(
-                        "images/display_1.png",
-                        width: mediaWidth <= 750
-                            ? mediaWidth * 0.8
-                            : mediaWidth * 0.4,
-                      ),
-                    ),
-                    DisplayBox(
+        child: Stack(
+          alignment: Alignment.center,
+          children: [
+            Image.asset(
+              logo,
+              width: mediaWidth <= 750 ? mediaWidth * 0.8 : mediaWidth * 0.4,
+            ),
+            SingleChildScrollView(
+              child: Column(
+                children: <Widget>[
+                  gapH64,
+                  Image.asset(
+                    "images/display_1.png",
+                    width:
+                        mediaWidth <= 750 ? mediaWidth * 0.8 : mediaWidth * 0.4,
+                  ),
+                  gapH64,
+                  DisplayBox(
+                    child: Column(
                       children: [
-                        Padding(
-                          padding: kPadding,
-                          child: Image.asset(
-                            fullLogo,
-                            height: 100,
-                          ),
+                        gapH64,
+                        Image.asset(
+                          fullLogo,
+                          height: 100,
                         ),
+                        gapH32,
                         const Padding(
                           padding: kPadding,
                           child: Text(
-                            //Replace this
                             'Oxygen Tech, sometimes known as O2Tech offers a service to build simple, performant, multi-platform applications for both mobile (iOS & Android), and web (websites & web apps).\n\n'
                             'We leverage the Flutter framework\'s multi-platform technology to streamline the process of development which leads to greater efficiency for O2Tech, and cheaper prices for our clients.\n\n'
                             'We are based on Dja Dja Wurrung Country (Central Victoria), but offer services remotely Australia-wide.\n\n'
@@ -81,106 +67,98 @@ class HomePage extends StatelessWidget {
                         ),
                       ],
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(32),
-                      child: Image.asset(
-                        "images/display_2.png",
-                        width: mediaWidth <= 750
-                            ? mediaWidth * 0.8
-                            : mediaWidth * 0.4,
-                      ),
-                    ),
-                    const PortfolioContent(),
-                    Padding(
-                      padding: const EdgeInsets.all(32),
-                      child: Image.asset(
-                        "images/display_3.png",
-                        width: mediaWidth <= 750
-                            ? mediaWidth * 0.8
-                            : mediaWidth * 0.4,
-                      ),
-                    ),
-                    const AboutContent(),
-                    Padding(
-                      padding: const EdgeInsets.all(32),
-                      child: Image.asset(
-                        "images/display_5.png",
-                        width: mediaWidth <= 750
-                            ? mediaWidth * 0.8
-                            : mediaWidth * 0.4,
-                      ),
-                    ),
-                    DisplayBox(
-                      children: [
-                        gapH12,
-                        Padding(
-                          padding: kPadding,
-                          child: Row(
+                  ),
+                  gapH64,
+                  Image.asset(
+                    "images/display_2.png",
+                    width:
+                        mediaWidth <= 750 ? mediaWidth * 0.8 : mediaWidth * 0.4,
+                  ),
+                  gapH64,
+                  const PortfolioContent(),
+                  gapH64,
+                  Image.asset(
+                    "images/display_3.png",
+                    width:
+                        mediaWidth <= 750 ? mediaWidth * 0.8 : mediaWidth * 0.4,
+                  ),
+                  gapH64,
+                  const AboutContent(),
+                  gapH64,
+                  Image.asset(
+                    "images/display_5.png",
+                    width:
+                        mediaWidth <= 750 ? mediaWidth * 0.8 : mediaWidth * 0.4,
+                  ),
+                  gapH64,
+                  DisplayBox(
+                    child: Padding(
+                      padding: kPadding,
+                      child: Column(
+                        children: [
+                          Row(
                             children: [
-                              SizedBox(
+                              Image.asset(
+                                'images/first.png',
                                 width: 80,
-                                child: Image.asset('images/first.png'),
                               ),
-                              const SizedBox(width: 24),
-                              SizedBox(
+                              gapW16,
+                              Image.asset(
+                                'images/torres.png',
                                 width: 80,
-                                child: Image.asset('images/torres.png'),
                               ),
                             ],
                           ),
-                        ),
-                        const Padding(
-                          padding: kPadding,
-                          child: Text(
-                            'Oxygen Tech acknowledges the Traditional Owners of the land, sea and waters of the areas we live and work on across Australia. We acknowledge their continuing connection to their culture and pay our respects to their Elders past and present.',
+                          gapH32,
+                          const Text(
+                            'Oxygen Tech acknowledges the Traditional Owners of '
+                            'the land, sea and waters of the areas we live and '
+                            'work on across Australia. We acknowledge their '
+                            'continuing connection to their culture and pay our '
+                            'respects to their Elders past and present.',
                             style: bodyStyle,
                           ),
-                        ),
-                        gapH12,
-                      ],
+                        ],
+                      ),
                     ),
-                    DisplayBox(
-                      children: [
-                        gapH12,
-                        Padding(
-                          padding: kPadding,
-                          child: Row(
+                  ),
+                  gapH32,
+                  DisplayBox(
+                    child: Padding(
+                      padding: kPadding,
+                      child: Column(
+                        children: [
+                          Row(
                             children: [
-                              SizedBox(
+                              Image.asset(
+                                'images/pride.png',
                                 width: 80,
-                                child: Image.asset('images/pride.png'),
                               ),
                             ],
                           ),
-                        ),
-                        const Padding(
-                          padding: kPadding,
-                          child: Align(
-                            alignment: Alignment.centerLeft,
-                            child: Text(
-                              'Oxygen Tech is committed to embracing diversity and welcomes all people.',
-                              style: bodyStyle,
-                            ),
+                          gapH32,
+                          const Text(
+                            'Oxygen Tech is committed to embracing diversity '
+                            'and welcomes all people.',
+                            style: bodyStyle,
                           ),
-                        ),
-                        gapH12,
-                      ],
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(32),
-                      child: Image.asset(
-                        "images/display_4.png",
-                        width: mediaWidth <= 750
-                            ? mediaWidth * 0.8
-                            : mediaWidth * 0.4,
+                        ],
                       ),
                     ),
-                    const ContactContent(),
-                  ],
-                ),
+                  ),
+                  gapH64,
+                  Image.asset(
+                    "images/display_4.png",
+                    width:
+                        mediaWidth <= 750 ? mediaWidth * 0.8 : mediaWidth * 0.4,
+                  ),
+                  gapH64,
+                  const ContactContent(),
+                  mediaWidth <= 750 ? gapH32 : gapH64,
+                ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

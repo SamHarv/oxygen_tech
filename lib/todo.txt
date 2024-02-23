@@ -1,0 +1,3 @@
+- Fix spacing
+
+- Glassmorphism for logo in background?

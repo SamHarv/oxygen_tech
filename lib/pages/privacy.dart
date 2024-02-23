@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import '/widgets/app_drawer.dart';
 import '/widgets/custom_appbar.dart';
-
 import '/constants.dart';
 
 class Privacy extends StatelessWidget {
@@ -15,30 +14,17 @@ class Privacy extends StatelessWidget {
       drawer: AppDrawer(),
       body: Center(
         child: SingleChildScrollView(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: <Widget>[
-              Padding(
-                padding: EdgeInsets.only(
-                  left: 32,
-                  top: 32,
-                  right: 32,
-                  bottom: 16,
-                ),
-                child: Text(
+          child: Padding(
+            padding: kPadding,
+            child: Column(
+              children: <Widget>[
+                Text(
                   'Privacy Policy',
                   textAlign: TextAlign.center,
                   style: headingStyle,
                 ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(
-                  left: 32,
-                  top: 16,
-                  right: 32,
-                  bottom: 32,
-                ),
-                child: Text(
+                gapH32,
+                Text(
                   'Oxygen Tech is committed to providing quality services to you and this policy outlines our ongoing obligations to you in respect of how we manage your Personal Information.\n'
                   'We have adopted the Australian Privacy Principles (APPs) contained in the Privacy Act 1988 (Cth) (the Privacy Act). The NPPs govern the way in which we collect, use, disclose, store, secure and dispose of your Personal Information.\n'
                   'A copy of the Australian Privacy Principles may be obtained from the website of The Office of the Australian Information Commissioner at https://www.oaic.gov.au/.\n\n'
@@ -75,8 +61,8 @@ class Privacy extends StatelessWidget {
                   'oxygentech@protonmail.com',
                   style: bodyStyle,
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),

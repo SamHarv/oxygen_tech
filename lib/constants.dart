@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
-import './widgets/app_drawer.dart';
 
-const Color kColor = Color.fromARGB(255, 0, 74, 173);
+import '/widgets/app_drawer.dart';
 
-const gapH35 = SizedBox(height: 35);
-const gapH20 = SizedBox(height: 20);
-const gapH12 = SizedBox(height: 12);
+const Color colour = Color.fromARGB(255, 0, 74, 173);
 
-const Color secondaryColor = Colors.black;
-const Color thirdColor = Colors.white;
+const gapH32 = SizedBox(height: 32);
+const gapH64 = SizedBox(height: 64);
+
+const gapW16 = SizedBox(width: 16);
+const gapW32 = SizedBox(width: 32);
+
+const Color secondaryColour = Colors.black;
+const Color thirdColour = Colors.white;
 const String fullLogo = 'images/2.png';
 const String logo = 'images/1.png';
 
@@ -16,16 +19,11 @@ const appDrawer = AppDrawer();
 
 const headingStyle = TextStyle(
   fontSize: 30.0,
-  color: kColor,
+  color: colour,
 );
 const bodyStyle = TextStyle(
   fontSize: 20.0,
-  color: secondaryColor,
+  color: secondaryColour,
 );
 
-const kPadding = EdgeInsets.only(
-  left: 24,
-  top: 12,
-  right: 24,
-  bottom: 12,
-);
+const kPadding = EdgeInsets.all(32);

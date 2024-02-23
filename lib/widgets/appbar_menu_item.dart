@@ -1,5 +1,5 @@
-import 'package:beamer/beamer.dart';
 import 'package:flutter/material.dart';
+import 'package:beamer/beamer.dart';
 
 import '/constants.dart';
 
@@ -20,7 +20,7 @@ class AppBarMenuItem extends StatelessWidget {
       child: InkWell(
         child: Text(
           title,
-          style: const TextStyle(color: kColor),
+          style: const TextStyle(color: colour),
         ),
         onTap: () => Beamer.of(context).beamToNamed(route),
       ),

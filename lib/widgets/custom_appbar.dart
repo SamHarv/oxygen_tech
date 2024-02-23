@@ -1,20 +1,17 @@
-import 'package:beamer/beamer.dart';
 import 'package:flutter/material.dart';
+import 'package:beamer/beamer.dart';
 
 import '/constants.dart';
 import './appbar_menu_item.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const CustomAppBar({
-    Key? key,
-  }) : super(key: key);
+  const CustomAppBar({Key? key}) : super(key: key);
   @override
   Size get preferredSize => const Size.fromHeight(60.0);
 
   @override
   Widget build(BuildContext context) {
     final double mediaWidth = MediaQuery.of(context).size.width;
-
     return AppBar(
       automaticallyImplyLeading: mediaWidth < 750 ? true : false,
       iconTheme: const IconThemeData(
@@ -31,86 +28,74 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                 ),
                 onTap: () => Beamer.of(context).beamToNamed('/'),
               )
-            : SizedBox(
-                width: mediaWidth,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    InkWell(
-                      child: Image.asset(
-                        fullLogo,
-                        fit: BoxFit.contain,
-                        height: 40.0,
+            : Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  InkWell(
+                    child: Image.asset(
+                      fullLogo,
+                      height: 40.0,
+                    ),
+                    onTap: () => Beamer.of(context).beamToNamed('/'),
+                  ),
+                  Row(
+                    children: [
+                      const AppBarMenuItem(
+                        title: 'Home',
+                        route: '/',
                       ),
-                      onTap: () => Beamer.of(context).beamToNamed('/'),
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        const SizedBox(
-                          width: 20,
-                        ),
-                        const AppBarMenuItem(
-                          title: 'Home',
-                          route: '/',
-                        ),
-                        const AppBarMenuItem(
-                          title: 'Portfolio',
-                          route: '/portfolio',
-                        ),
-                        const AppBarMenuItem(
-                          title: 'About',
-                          route: '/about',
-                        ),
-                        const AppBarMenuItem(
-                          title: 'Contact',
-                          route: '/contact',
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(16),
-                          child: PopupMenuButton<String>(
-                            color: Colors.white,
-                            child: const Text(
-                              'Legal',
-                              style: TextStyle(
-                                // fontSize: 20.0,
-                                color: kColor,
-                              ),
+                      const AppBarMenuItem(
+                        title: 'Portfolio',
+                        route: '/portfolio',
+                      ),
+                      const AppBarMenuItem(
+                        title: 'About',
+                        route: '/about',
+                      ),
+                      const AppBarMenuItem(
+                        title: 'Contact',
+                        route: '/contact',
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(16),
+                        child: PopupMenuButton<String>(
+                          color: Colors.white,
+                          child: const Text(
+                            'Legal',
+                            style: TextStyle(
+                              color: colour,
                             ),
-                            itemBuilder: (BuildContext context) {
-                              return [
-                                const PopupMenuItem<String>(
-                                  value: 'privacy',
-                                  child: Text(
-                                    'Privacy Policy',
-                                    style: TextStyle(color: kColor),
-                                  ),
-                                ),
-                                const PopupMenuItem<String>(
-                                  value: 'terms',
-                                  child: Text(
-                                    'Terms & Conditions',
-                                    style: TextStyle(color: kColor),
-                                  ),
-                                ),
-                              ];
-                            },
-                            onSelected: (value) {
-                              // Handle the selected item here
-                              if (value == 'privacy') {
-                                Beamer.of(context).beamToNamed('/privacy');
-                              } else if (value == 'terms') {
-                                Beamer.of(context).beamToNamed('/terms');
-                              }
-                            },
                           ),
+                          itemBuilder: (BuildContext context) {
+                            return [
+                              const PopupMenuItem<String>(
+                                value: 'privacy',
+                                child: Text(
+                                  'Privacy Policy',
+                                  style: TextStyle(color: colour),
+                                ),
+                              ),
+                              const PopupMenuItem<String>(
+                                value: 'terms',
+                                child: Text(
+                                  'Terms & Conditions',
+                                  style: TextStyle(color: colour),
+                                ),
+                              ),
+                            ];
+                          },
+                          onSelected: (value) {
+                            if (value == 'privacy') {
+                              Beamer.of(context).beamToNamed('/privacy');
+                            } else if (value == 'terms') {
+                              Beamer.of(context).beamToNamed('/terms');
+                            }
+                          },
                         ),
-                      ],
-                    ),
-                  ],
-                ),
+                      ),
+                    ],
+                  ),
+                ],
               ),
       ),
       actions: mediaWidth > 750

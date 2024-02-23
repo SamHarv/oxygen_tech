@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 // ignore: depend_on_referenced_packages
 import 'package:flutter_web_plugins/url_strategy.dart';
 import 'package:beamer/beamer.dart';
@@ -8,11 +7,11 @@ import '/routes.dart';
 
 void main() {
   usePathUrlStrategy();
-  runApp(const MyApp());
+  runApp(const O2Tech());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class O2Tech extends StatelessWidget {
+  const O2Tech({super.key});
 
   @override
   Widget build(BuildContext context) {

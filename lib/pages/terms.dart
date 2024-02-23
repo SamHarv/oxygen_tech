@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import '/widgets/app_drawer.dart';
 import '/widgets/custom_appbar.dart';
-
 import '/constants.dart';
 
 class Terms extends StatelessWidget {
@@ -15,30 +14,17 @@ class Terms extends StatelessWidget {
       drawer: AppDrawer(),
       body: Center(
         child: SingleChildScrollView(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: <Widget>[
-              Padding(
-                padding: EdgeInsets.only(
-                  left: 32,
-                  top: 32,
-                  right: 32,
-                  bottom: 16,
-                ),
-                child: Text(
+          child: Padding(
+            padding: kPadding,
+            child: Column(
+              children: <Widget>[
+                Text(
                   'Terms & Conditions',
                   textAlign: TextAlign.center,
                   style: headingStyle,
                 ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(
-                  left: 32,
-                  top: 16,
-                  right: 32,
-                  bottom: 32,
-                ),
-                child: Text(
+                gapH32,
+                Text(
                   '© Copyright 2023 | Oxygen Tech\n\n'
                   'ABN 31968104103\n\n'
                   '11 March 2023\n\n'
@@ -164,8 +150,8 @@ class Terms extends StatelessWidget {
                   '18.4. If any part of these T&Cs is found by a court of competent jurisdiction to be invalid, unlawful or unenforceable then such part shall be severed from the remainder of the T&Cs, which shall continue to be valid and enforceable to the fullest extent permitted by law.',
                   style: bodyStyle,
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),

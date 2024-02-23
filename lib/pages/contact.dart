@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '/content/contact_content.dart';
-
 import '/widgets/custom_appbar.dart';
-
 import '/constants.dart';
 
 class ContactPage extends StatelessWidget {
@@ -28,12 +26,7 @@ class ContactPage extends StatelessWidget {
         ),
         child: const Center(
           child: SingleChildScrollView(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: <Widget>[
-                ContactContent(),
-              ],
-            ),
+            child: ContactContent(),
           ),
         ),
       ),
