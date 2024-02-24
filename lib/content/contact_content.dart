@@ -52,11 +52,17 @@ class ContactContent extends StatelessWidget {
             style: bodyStyle,
           ),
           gapH32,
-          const TextButton(
+          ElevatedButton(
             onPressed: _sendEmail,
-            child: Text(
+            style: ButtonStyle(
+              backgroundColor: MaterialStateProperty.all(colour),
+            ),
+            child: const Text(
               'oxygentech@protonmail.com',
-              style: bodyStyle,
+              style: TextStyle(
+                fontSize: 20.0,
+                color: Colors.white,
+              ),
             ),
           ),
           Padding(

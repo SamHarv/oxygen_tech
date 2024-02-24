@@ -1,8 +1,7 @@
-import 'package:beamer/beamer.dart';
 import 'package:flutter/material.dart';
 
+import '/widgets/contact_button.dart';
 import '/widgets/display_box.dart';
-
 import '/constants.dart';
 
 class ServicesContent extends StatelessWidget {
@@ -10,29 +9,29 @@ class ServicesContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return DisplayBox(
+    return const DisplayBox(
       child: Padding(
         padding: kPadding,
         child: Column(
           children: [
-            const Text(
+            Text(
               'Services',
               textAlign: TextAlign.center,
               style: headingStyle,
             ),
             gapH32,
-            const Text(
+            Text(
               'Services offered by Oxygen Tech.',
               style: bodyStyle,
             ),
             gapH32,
-            const Text(
+            Text(
               'Software Development',
               textAlign: TextAlign.center,
               style: headingStyle,
             ),
             gapH32,
-            const Text(
+            Text(
               'Oxygen Tech offers software development services for mobile '
               'and/ or web applications with Flutter.\n\n'
               'We can help you with the entire software development lifecycle, '
@@ -45,25 +44,15 @@ class ServicesContent extends StatelessWidget {
               style: bodyStyle,
             ),
             gapH32,
-            TextButton(
-              onPressed: () => Beamer.of(context).beamToNamed('/contact'),
-              child: const Text(
-                'Contact',
-                style: TextStyle(
-                  fontSize: 16.0,
-                  color: colour,
-                  decoration: TextDecoration.underline,
-                ),
-              ),
-            ),
+            ContactButton(),
             gapH32,
-            const Text(
+            Text(
               'Tutoring',
               textAlign: TextAlign.center,
               style: headingStyle,
             ),
             gapH32,
-            const Text(
+            Text(
               'Oxygen Tech offers tutoring services on fundamental computer '
               'science and programming principles with programming languages '
               'and frameworks such as Flutter and Dart, Python, and Java.\n\n'
@@ -78,17 +67,7 @@ class ServicesContent extends StatelessWidget {
               style: bodyStyle,
             ),
             gapH32,
-            TextButton(
-              onPressed: () => Beamer.of(context).beamToNamed('/contact'),
-              child: const Text(
-                'Contact',
-                style: TextStyle(
-                  fontSize: 16.0,
-                  color: colour,
-                  decoration: TextDecoration.underline,
-                ),
-              ),
-            ),
+            ContactButton(),
           ],
         ),
       ),
