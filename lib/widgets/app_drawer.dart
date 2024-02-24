@@ -34,6 +34,12 @@ class AppDrawer extends StatelessWidget {
             ),
             const Divider(),
             DrawerListTile(
+              title: 'Services',
+              icon: Icons.devices,
+              onTap: () => Beamer.of(context).beamToNamed('/services'),
+            ),
+            const Divider(),
+            DrawerListTile(
               title: 'About',
               icon: Icons.info,
               onTap: () => Beamer.of(context).beamToNamed('/about'),

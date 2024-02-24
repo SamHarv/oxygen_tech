@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-import '/content/contact_content.dart';
-import '/widgets/custom_appbar.dart';
+import '/content/services_content.dart';
 import '/constants.dart';
+import '/widgets/custom_appbar.dart';
 
-class ContactPage extends StatelessWidget {
-  const ContactPage({super.key});
+class ServicesPage extends StatelessWidget {
+  const ServicesPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,7 @@ class ContactPage extends StatelessWidget {
             child: Column(
               children: [
                 gapH32,
-                ContactContent(),
+                ServicesContent(),
                 gapH32,
               ],
             ),

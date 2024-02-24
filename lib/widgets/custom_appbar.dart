@@ -41,8 +41,8 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                   Row(
                     children: [
                       const AppBarMenuItem(
-                        title: 'Home',
-                        route: '/',
+                        title: 'Services',
+                        route: '/services',
                       ),
                       const AppBarMenuItem(
                         title: 'Portfolio',

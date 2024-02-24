@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:oxygen_tech/content/services_content.dart';
 
 import '/content/about_content.dart';
 import '/content/portfolio_content.dart';
@@ -75,6 +76,14 @@ class HomePage extends StatelessWidget {
                         mediaWidth <= 750 ? mediaWidth * 0.8 : mediaWidth * 0.4,
                   ),
                   gapH64,
+                  const ServicesContent(),
+                  gapH64,
+                  Image.asset(
+                    "images/display_5.png",
+                    width:
+                        mediaWidth <= 750 ? mediaWidth * 0.8 : mediaWidth * 0.4,
+                  ),
+                  gapH64,
                   const PortfolioContent(),
                   gapH64,
                   Image.asset(
@@ -86,7 +95,7 @@ class HomePage extends StatelessWidget {
                   const AboutContent(),
                   gapH64,
                   Image.asset(
-                    "images/display_5.png",
+                    "images/display_4.png",
                     width:
                         mediaWidth <= 750 ? mediaWidth * 0.8 : mediaWidth * 0.4,
                   ),
@@ -146,13 +155,7 @@ class HomePage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  gapH64,
-                  Image.asset(
-                    "images/display_4.png",
-                    width:
-                        mediaWidth <= 750 ? mediaWidth * 0.8 : mediaWidth * 0.4,
-                  ),
-                  gapH64,
+                  gapH32,
                   const ContactContent(),
                   mediaWidth <= 750 ? gapH32 : gapH64,
                 ],

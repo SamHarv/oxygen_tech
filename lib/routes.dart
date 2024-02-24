@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:beamer/beamer.dart';
+import 'package:oxygen_tech/pages/services.dart';
 
 import 'pages/privacy.dart';
 import 'pages/home_page.dart';
@@ -19,6 +20,14 @@ final routerDelegate = BeamerDelegate(
           type: BeamPageType.fadeTransition,
           title: 'Oxygen Tech',
           child: HomePage(),
+        );
+      },
+      '/services': (context, state, data) {
+        return const BeamPage(
+          key: ValueKey('services'),
+          type: BeamPageType.fadeTransition,
+          title: 'Services - Oxygen Tech',
+          child: ServicesPage(),
         );
       },
       '/portfolio': (context, state, data) {

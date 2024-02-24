@@ -26,7 +26,13 @@ class Portfolio extends StatelessWidget {
         ),
         child: const Center(
           child: SingleChildScrollView(
-            child: PortfolioContent(),
+            child: Column(
+              children: [
+                gapH32,
+                PortfolioContent(),
+                gapH32,
+              ],
+            ),
           ),
         ),
       ),

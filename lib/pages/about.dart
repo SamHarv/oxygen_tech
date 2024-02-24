@@ -26,7 +26,13 @@ class AboutPage extends StatelessWidget {
         ),
         child: const Center(
           child: SingleChildScrollView(
-            child: AboutContent(),
+            child: Column(
+              children: [
+                gapH32,
+                AboutContent(),
+                gapH32,
+              ],
+            ),
           ),
         ),
       ),
