@@ -17,7 +17,7 @@ class ContactButton extends StatelessWidget {
         'Contact',
         style: TextStyle(
           fontSize: 20.0,
-          color: Colors.white,
+          color: thirdColour,
         ),
       ),
     );

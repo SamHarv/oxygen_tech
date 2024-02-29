@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:oxygen_tech/content/about_content.dart';
 
 import '/constants.dart';
-import '/widgets/custom_appbar.dart';
+import '../widgets/custom_appbar_widget.dart';
 
 class AboutPage extends StatelessWidget {
   const AboutPage({super.key});

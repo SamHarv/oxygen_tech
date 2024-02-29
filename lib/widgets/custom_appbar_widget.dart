@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:beamer/beamer.dart';
 
 import '/constants.dart';
-import './appbar_menu_item.dart';
+import 'appbar_menu_widget.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppBar({Key? key}) : super(key: key);
@@ -15,9 +15,9 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       automaticallyImplyLeading: mediaWidth < 750 ? true : false,
       iconTheme: const IconThemeData(
-        color: Colors.black,
+        color: secondaryColour,
       ),
-      backgroundColor: Colors.white,
+      backgroundColor: thirdColour,
       title: Center(
         child: mediaWidth < 750
             ? InkWell(
@@ -59,7 +59,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                       Padding(
                         padding: const EdgeInsets.all(16),
                         child: PopupMenuButton<String>(
-                          color: Colors.white,
+                          color: thirdColour,
                           child: const Text(
                             'Legal',
                             style: TextStyle(
@@ -106,7 +106,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                 child: IconButton(
                   onPressed: () => Beamer.of(context).beamToNamed('/contact'),
                   icon: const Icon(Icons.email_outlined),
-                  color: Colors.black,
+                  color: secondaryColour,
                 ),
               ),
             ],

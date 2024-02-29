@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:beamer/beamer.dart';
 
-import '/widgets/drawer_list_tile.dart';
+import 'drawer_tile_widget.dart';
 import '/constants.dart';
 
 class AppDrawer extends StatelessWidget {

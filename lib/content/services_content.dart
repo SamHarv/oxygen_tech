@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '/widgets/contact_button.dart';
-import '/widgets/display_box.dart';
+import '../widgets/contact_button_widget.dart';
+import '../widgets/display_box_widget.dart';
 import '/constants.dart';
 
 class ServicesContent extends StatelessWidget {

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '/content/portfolio_content.dart';
 import '/constants.dart';
-import '/widgets/custom_appbar.dart';
+import '../widgets/custom_appbar_widget.dart';
 
 class Portfolio extends StatelessWidget {
   const Portfolio({super.key});

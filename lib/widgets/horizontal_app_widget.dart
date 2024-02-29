@@ -3,19 +3,19 @@ import 'package:flutter/material.dart';
 class HorizontalAppCard extends StatelessWidget {
   final String screenshot;
   final double width;
-  final Function onPressed;
+  final Function onTap;
 
   const HorizontalAppCard({
     super.key,
     required this.screenshot,
     required this.width,
-    required this.onPressed,
+    required this.onTap,
   });
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () => onPressed(),
+      onTap: () => onTap(),
       child: Image.asset(
         screenshot,
         width: width,

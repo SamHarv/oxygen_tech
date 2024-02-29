@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import '/widgets/horizontal_app_card.dart';
-import '/widgets/vertical_app_card.dart';
-import '/widgets/display_box.dart';
+import '../widgets/horizontal_app_widget.dart';
+import '../widgets/vertical_app_widget.dart';
+import '../widgets/display_box_widget.dart';
 
 import '/constants.dart';
 
@@ -79,7 +79,7 @@ class PortfolioContent extends StatelessWidget {
                     ),
                     gapH32,
                     VerticalAppCard(
-                      onPressed: _launchPlansUrl,
+                      onTap: _launchPlansUrl,
                       screenshot: 'images/plans_tile.png',
                       height: mediaWidth < 750
                           ? mediaWidth * 0.9
@@ -93,7 +93,7 @@ class PortfolioContent extends StatelessWidget {
                     ),
                     gapH32,
                     VerticalAppCard(
-                      onPressed: _launchBrighterTomorrowUrl,
+                      onTap: _launchBrighterTomorrowUrl,
                       screenshot: 'images/brighter_tomorrow_tile.png',
                       height: mediaWidth < 750
                           ? mediaWidth * 0.9
@@ -107,7 +107,7 @@ class PortfolioContent extends StatelessWidget {
                     ),
                     gapH32,
                     VerticalAppCard(
-                      onPressed: _launchMoMUrl,
+                      onTap: _launchMoMUrl,
                       screenshot: 'images/MoM_tile_dark.png',
                       height: mediaWidth < 750
                           ? mediaWidth * 0.9
@@ -121,7 +121,7 @@ class PortfolioContent extends StatelessWidget {
                     ),
                     gapH32,
                     HorizontalAppCard(
-                      onPressed: _launchDigbyUrl,
+                      onTap: _launchDigbyUrl,
                       screenshot: 'images/digby_tile.png',
                       width: mediaWidth < 750
                           ? mediaWidth * 0.9
@@ -156,7 +156,7 @@ class PortfolioContent extends StatelessWidget {
                         ),
                         gapH32,
                         VerticalAppCard(
-                          onPressed: _launchPlansUrl,
+                          onTap: _launchPlansUrl,
                           screenshot: 'images/plans_tile.png',
                           height: mediaWidth < 750
                               ? (mediaWidth * 0.45) - 48
@@ -170,7 +170,7 @@ class PortfolioContent extends StatelessWidget {
                         ),
                         gapH32,
                         VerticalAppCard(
-                          onPressed: _launchMoMUrl,
+                          onTap: _launchMoMUrl,
                           screenshot: 'images/MoM_tile_dark.png',
                           height: mediaWidth < 750
                               ? (mediaWidth * 0.45) - 48
@@ -198,7 +198,7 @@ class PortfolioContent extends StatelessWidget {
                         ),
                         gapH32,
                         VerticalAppCard(
-                          onPressed: _launchBrighterTomorrowUrl,
+                          onTap: _launchBrighterTomorrowUrl,
                           screenshot: 'images/brighter_tomorrow_tile.png',
                           height: mediaWidth < 750
                               ? (mediaWidth * 0.45) - 48
@@ -212,7 +212,7 @@ class PortfolioContent extends StatelessWidget {
                         ),
                         gapH32,
                         HorizontalAppCard(
-                          onPressed: _launchDigbyUrl,
+                          onTap: _launchDigbyUrl,
                           screenshot: 'images/digby_tile.png',
                           width: mediaWidth < 750
                               ? (mediaWidth * 0.45) - 48

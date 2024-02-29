@@ -4,8 +4,8 @@ import 'package:oxygen_tech/content/services_content.dart';
 import '/content/about_content.dart';
 import '/content/portfolio_content.dart';
 import '/content/contact_content.dart';
-import '/widgets/display_box.dart';
-import '/widgets/custom_appbar.dart';
+import '../widgets/display_box_widget.dart';
+import '../widgets/custom_appbar_widget.dart';
 import '/constants.dart';
 
 class HomePage extends StatelessWidget {

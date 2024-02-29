@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '/widgets/app_drawer.dart';
-import '/widgets/custom_appbar.dart';
+import '../widgets/app_drawer_widget.dart';
+import '../widgets/custom_appbar_widget.dart';
 import '/constants.dart';
 
 class Terms extends StatelessWidget {

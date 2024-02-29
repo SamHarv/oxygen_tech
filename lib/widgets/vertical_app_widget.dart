@@ -3,19 +3,19 @@ import 'package:flutter/material.dart';
 class VerticalAppCard extends StatelessWidget {
   final String screenshot;
   final double height;
-  final Function onPressed;
+  final Function onTap;
 
   const VerticalAppCard({
     super.key,
     required this.screenshot,
     required this.height,
-    required this.onPressed,
+    required this.onTap,
   });
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () => onPressed(),
+      onTap: () => onTap(),
       child: Image.asset(
         screenshot,
         height: height,

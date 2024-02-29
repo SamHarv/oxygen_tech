@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import '/widgets/display_box.dart';
+import '../widgets/display_box_widget.dart';
 import '/constants.dart';
 
 final Uri _gitHubUrl = Uri.parse('https://github.com/SamHarv');

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '/widgets/display_box.dart';
+import '../widgets/display_box_widget.dart';
 
 import '/constants.dart';
 

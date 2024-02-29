@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '/content/contact_content.dart';
-import '/widgets/custom_appbar.dart';
+import '../widgets/custom_appbar_widget.dart';
 import '/constants.dart';
 
 class ContactPage extends StatelessWidget {

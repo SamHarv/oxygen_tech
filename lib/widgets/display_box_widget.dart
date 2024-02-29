@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../constants.dart';
+
 class DisplayBox extends StatelessWidget {
   final Widget? child;
   const DisplayBox({
@@ -14,7 +16,7 @@ class DisplayBox extends StatelessWidget {
       width: mediaWidth < 750 ? mediaWidth : mediaWidth * 0.9,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(32),
-        color: Colors.white,
+        color: thirdColour,
       ),
       child: child!,
     );
