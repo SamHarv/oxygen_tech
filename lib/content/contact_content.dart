@@ -1,40 +1,17 @@
 import 'package:beamer/beamer.dart';
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import '../widgets/display_box_widget.dart';
+import '/services/url_launcher_service.dart';
+import '/widgets/display_box_widget.dart';
 import '/constants.dart';
-
-final Uri _gitHubUrl = Uri.parse('https://github.com/SamHarv');
-final Uri _linkedInUrl =
-    Uri.parse('https://www.linkedin.com/in/sam-harvey-83a182234/');
-
-Future<void> _launchLinkedInUrl() async {
-  if (!await launchUrl(_linkedInUrl)) {
-    throw 'Could not launch $_linkedInUrl';
-  }
-}
-
-Future<void> _launchGitHubUrl() async {
-  if (!await launchUrl(_gitHubUrl)) {
-    throw 'Could not launch $_gitHubUrl';
-  }
-}
-
-void _sendEmail() async {
-  final Uri emailLaunchUri = Uri(
-    scheme: 'mailto',
-    path: 'oxygentech@protonmail.com',
-  );
-  await launchUrl(emailLaunchUri);
-}
 
 class ContactContent extends StatelessWidget {
   const ContactContent({super.key});
 
   @override
   Widget build(BuildContext context) {
+    UrlLauncherService url = UrlLauncherService();
     return DisplayBox(
       child: Column(
         children: [
@@ -53,7 +30,7 @@ class ContactContent extends StatelessWidget {
           ),
           gapH32,
           ElevatedButton(
-            onPressed: _sendEmail,
+            onPressed: url.sendEmail,
             style: ButtonStyle(
               backgroundColor: MaterialStateProperty.all(colour),
             ),
@@ -61,7 +38,7 @@ class ContactContent extends StatelessWidget {
               'oxygentech@protonmail.com',
               style: TextStyle(
                 fontSize: 20.0,
-                color: Colors.white,
+                color: thirdColour,
               ),
             ),
           ),
@@ -87,11 +64,11 @@ class ContactContent extends StatelessWidget {
                 ),
                 IconButton(
                   icon: const FaIcon(FontAwesomeIcons.github),
-                  onPressed: () => _launchGitHubUrl(),
+                  onPressed: () => url.launchGitHubUrl(),
                 ),
                 IconButton(
                   icon: const FaIcon(FontAwesomeIcons.linkedinIn),
-                  onPressed: () => _launchLinkedInUrl(),
+                  onPressed: () => url.launchLinkedInUrl(),
                 ),
                 IconButton(
                   icon: const FaIcon(

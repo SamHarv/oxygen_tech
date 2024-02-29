@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:beamer/beamer.dart';
-import 'package:oxygen_tech/pages/services.dart';
+import 'package:oxygen_tech/pages/services_page.dart';
 
-import 'pages/privacy.dart';
+import 'pages/privacy_page.dart';
 import 'pages/home_page.dart';
-import 'pages/portfolio.dart';
-import 'pages/about.dart';
-import 'pages/contact.dart';
-import 'pages/terms.dart';
+import 'pages/portfolio_page.dart';
+import 'pages/about_page.dart';
+import 'pages/contact_page.dart';
+import 'pages/terms_page.dart';
 
 final routerDelegate = BeamerDelegate(
   notFoundRedirectNamed: '/home',

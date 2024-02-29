@@ -1,49 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 
-import '../widgets/horizontal_app_widget.dart';
-import '../widgets/vertical_app_widget.dart';
-import '../widgets/display_box_widget.dart';
-
+import '/services/url_launcher_service.dart';
+import '/widgets/horizontal_app_widget.dart';
+import '/widgets/vertical_app_widget.dart';
+import '/widgets/display_box_widget.dart';
 import '/constants.dart';
-
-final Uri _plansUrl = Uri.parse(
-    'https://play.google.com/store/apps/details?id=com.o2tech.plans&pcampaignid=web_share');
-final Uri _moMUrl = Uri.parse('https://matterofmovement.com.au');
-final Uri _digbyUrl = Uri.parse(
-    'https://play.google.com/store/apps/details?id=com.samharvey.digby&pcampaignid=web_share');
-final Uri _digbyWebUrl = Uri.parse('https://digbygame.com.au');
-final Uri _brighterTomorrowUrl = Uri.parse('https://brightertomorrow.com.au');
-
-Future<void> _launchPlansUrl() async {
-  if (!await launchUrl(_plansUrl)) {
-    throw 'Could not launch $_plansUrl';
-  }
-}
-
-Future<void> _launchMoMUrl() async {
-  if (!await launchUrl(_moMUrl)) {
-    throw 'Could not launch $_moMUrl';
-  }
-}
-
-Future<void> _launchDigbyUrl() async {
-  if (!await launchUrl(_digbyUrl)) {
-    throw 'Could not launch $_digbyUrl';
-  }
-}
-
-Future<void> _launchDigbyWebUrl() async {
-  if (!await launchUrl(_digbyWebUrl)) {
-    throw 'Could not launch $_digbyWebUrl';
-  }
-}
-
-Future<void> _launchBrighterTomorrowUrl() async {
-  if (!await launchUrl(_brighterTomorrowUrl)) {
-    throw 'Could not launch $_brighterTomorrowUrl';
-  }
-}
 
 class PortfolioContent extends StatelessWidget {
   const PortfolioContent({super.key});
@@ -51,6 +12,7 @@ class PortfolioContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double mediaWidth = MediaQuery.of(context).size.width;
+    UrlLauncherService url = UrlLauncherService();
 
     return DisplayBox(
       child: Column(
@@ -79,7 +41,7 @@ class PortfolioContent extends StatelessWidget {
                     ),
                     gapH32,
                     VerticalAppCard(
-                      onTap: _launchPlansUrl,
+                      onTap: url.launchPlansUrl,
                       screenshot: 'images/plans_tile.png',
                       height: mediaWidth < 750
                           ? mediaWidth * 0.9
@@ -93,7 +55,7 @@ class PortfolioContent extends StatelessWidget {
                     ),
                     gapH32,
                     VerticalAppCard(
-                      onTap: _launchBrighterTomorrowUrl,
+                      onTap: url.launchBrighterTomorrowUrl,
                       screenshot: 'images/brighter_tomorrow_tile.png',
                       height: mediaWidth < 750
                           ? mediaWidth * 0.9
@@ -107,7 +69,7 @@ class PortfolioContent extends StatelessWidget {
                     ),
                     gapH32,
                     VerticalAppCard(
-                      onTap: _launchMoMUrl,
+                      onTap: url.launchMoMUrl,
                       screenshot: 'images/MoM_tile_dark.png',
                       height: mediaWidth < 750
                           ? mediaWidth * 0.9
@@ -121,16 +83,16 @@ class PortfolioContent extends StatelessWidget {
                     ),
                     gapH32,
                     HorizontalAppCard(
-                      onTap: _launchDigbyUrl,
+                      onTap: url.launchDigbyUrl,
                       screenshot: 'images/digby_tile.png',
                       width: mediaWidth < 750
                           ? mediaWidth * 0.9
                           : mediaWidth * 0.8,
                     ),
                     gapH32,
-                    const TextButton(
-                      onPressed: _launchDigbyWebUrl,
-                      child: Text(
+                    TextButton(
+                      onPressed: url.launchDigbyWebUrl,
+                      child: const Text(
                         'Play Digby in your browser',
                         style: TextStyle(
                           fontSize: 16.0,
@@ -144,7 +106,6 @@ class PortfolioContent extends StatelessWidget {
                 )
               : Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  // mainAxisSize: MainAxisSize.max,
                   children: [
                     gapW32,
                     Column(
@@ -156,7 +117,7 @@ class PortfolioContent extends StatelessWidget {
                         ),
                         gapH32,
                         VerticalAppCard(
-                          onTap: _launchPlansUrl,
+                          onTap: url.launchPlansUrl,
                           screenshot: 'images/plans_tile.png',
                           height: mediaWidth < 750
                               ? (mediaWidth * 0.45) - 48
@@ -170,16 +131,15 @@ class PortfolioContent extends StatelessWidget {
                         ),
                         gapH32,
                         VerticalAppCard(
-                          onTap: _launchMoMUrl,
+                          onTap: url.launchMoMUrl,
                           screenshot: 'images/MoM_tile_dark.png',
                           height: mediaWidth < 750
                               ? (mediaWidth * 0.45) - 48
                               : (mediaWidth * 0.4) - 48,
                         ),
                         gapH32,
-                        // Remove the below SizedBox when another landscape app
-                        // is added to the portfolio. This helps align the
-                        // design
+                        // Remove below SizedBox when another landscape app
+                        // is added to the portfolio. This helps alignment
                         SizedBox(
                           width: mediaWidth < 750
                               ? (mediaWidth * 0.45) - 48
@@ -198,7 +158,7 @@ class PortfolioContent extends StatelessWidget {
                         ),
                         gapH32,
                         VerticalAppCard(
-                          onTap: _launchBrighterTomorrowUrl,
+                          onTap: url.launchBrighterTomorrowUrl,
                           screenshot: 'images/brighter_tomorrow_tile.png',
                           height: mediaWidth < 750
                               ? (mediaWidth * 0.45) - 48
@@ -212,16 +172,16 @@ class PortfolioContent extends StatelessWidget {
                         ),
                         gapH32,
                         HorizontalAppCard(
-                          onTap: _launchDigbyUrl,
+                          onTap: url.launchDigbyUrl,
                           screenshot: 'images/digby_tile.png',
                           width: mediaWidth < 750
                               ? (mediaWidth * 0.45) - 48
                               : (mediaWidth * 0.4) - 48,
                         ),
                         gapH32,
-                        const TextButton(
-                          onPressed: _launchDigbyWebUrl,
-                          child: Text(
+                        TextButton(
+                          onPressed: url.launchDigbyWebUrl,
+                          child: const Text(
                             'Play Digby in your browser',
                             style: TextStyle(
                               fontSize: 16.0,
