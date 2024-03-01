@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 
-import '../widgets/app_drawer_widget.dart';
-import '../widgets/custom_appbar_widget.dart';
+import '/widgets/app_drawer_widget.dart';
+import '/widgets/custom_appbar_widget.dart';
 import '/constants.dart';
 
-class Terms extends StatelessWidget {
-  const Terms({super.key});
+class TermsPage extends StatelessWidget {
+  const TermsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      appBar: CustomAppBar(),
-      drawer: AppDrawer(),
+      appBar: CustomAppBarWidget(),
+      drawer: AppDrawerWidget(),
       body: Center(
         child: SingleChildScrollView(
           child: Padding(

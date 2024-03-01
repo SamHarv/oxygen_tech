@@ -11,10 +11,10 @@ class PortfolioContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double mediaWidth = MediaQuery.of(context).size.width;
-    UrlLauncherService url = UrlLauncherService();
+    final mediaWidth = MediaQuery.of(context).size.width;
+    final url = UrlLauncherService();
 
-    return DisplayBox(
+    return DisplayBoxWidget(
       child: Column(
         children: [
           gapH32,
@@ -40,9 +40,9 @@ class PortfolioContent extends StatelessWidget {
                       style: headingStyle,
                     ),
                     gapH32,
-                    VerticalAppCard(
+                    VerticalAppWidget(
                       onTap: url.launchPlansUrl,
-                      screenshot: 'images/plans_tile.png',
+                      screenshotPath: 'images/plans_tile.png',
                       height: mediaWidth < 750
                           ? mediaWidth * 0.9
                           : mediaWidth * 0.8,
@@ -54,9 +54,9 @@ class PortfolioContent extends StatelessWidget {
                       style: headingStyle,
                     ),
                     gapH32,
-                    VerticalAppCard(
+                    VerticalAppWidget(
                       onTap: url.launchBrighterTomorrowUrl,
-                      screenshot: 'images/brighter_tomorrow_tile.png',
+                      screenshotPath: 'images/brighter_tomorrow_tile.png',
                       height: mediaWidth < 750
                           ? mediaWidth * 0.9
                           : mediaWidth * 0.8,
@@ -68,9 +68,9 @@ class PortfolioContent extends StatelessWidget {
                       style: headingStyle,
                     ),
                     gapH32,
-                    VerticalAppCard(
+                    VerticalAppWidget(
                       onTap: url.launchMoMUrl,
-                      screenshot: 'images/MoM_tile_dark.png',
+                      screenshotPath: 'images/MoM_tile_dark.png',
                       height: mediaWidth < 750
                           ? mediaWidth * 0.9
                           : mediaWidth * 0.8,
@@ -82,9 +82,9 @@ class PortfolioContent extends StatelessWidget {
                       style: headingStyle,
                     ),
                     gapH32,
-                    HorizontalAppCard(
+                    HorizontalAppWidget(
                       onTap: url.launchDigbyUrl,
-                      screenshot: 'images/digby_tile.png',
+                      screenshotPath: 'images/digby_tile.png',
                       width: mediaWidth < 750
                           ? mediaWidth * 0.9
                           : mediaWidth * 0.8,
@@ -116,9 +116,9 @@ class PortfolioContent extends StatelessWidget {
                           style: headingStyle,
                         ),
                         gapH32,
-                        VerticalAppCard(
+                        VerticalAppWidget(
                           onTap: url.launchPlansUrl,
-                          screenshot: 'images/plans_tile.png',
+                          screenshotPath: 'images/plans_tile.png',
                           height: mediaWidth < 750
                               ? (mediaWidth * 0.45) - 48
                               : (mediaWidth * 0.4) - 48,
@@ -130,9 +130,9 @@ class PortfolioContent extends StatelessWidget {
                           style: headingStyle,
                         ),
                         gapH32,
-                        VerticalAppCard(
+                        VerticalAppWidget(
                           onTap: url.launchMoMUrl,
-                          screenshot: 'images/MoM_tile_dark.png',
+                          screenshotPath: 'images/MoM_tile_dark.png',
                           height: mediaWidth < 750
                               ? (mediaWidth * 0.45) - 48
                               : (mediaWidth * 0.4) - 48,
@@ -157,9 +157,9 @@ class PortfolioContent extends StatelessWidget {
                           style: headingStyle,
                         ),
                         gapH32,
-                        VerticalAppCard(
+                        VerticalAppWidget(
                           onTap: url.launchBrighterTomorrowUrl,
-                          screenshot: 'images/brighter_tomorrow_tile.png',
+                          screenshotPath: 'images/brighter_tomorrow_tile.png',
                           height: mediaWidth < 750
                               ? (mediaWidth * 0.45) - 48
                               : (mediaWidth * 0.4) - 48,
@@ -171,9 +171,9 @@ class PortfolioContent extends StatelessWidget {
                           style: headingStyle,
                         ),
                         gapH32,
-                        HorizontalAppCard(
+                        HorizontalAppWidget(
                           onTap: url.launchDigbyUrl,
-                          screenshot: 'images/digby_tile.png',
+                          screenshotPath: 'images/digby_tile.png',
                           width: mediaWidth < 750
                               ? (mediaWidth * 0.45) - 48
                               : (mediaWidth * 0.4) - 48,

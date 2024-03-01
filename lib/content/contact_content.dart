@@ -11,8 +11,9 @@ class ContactContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    UrlLauncherService url = UrlLauncherService();
-    return DisplayBox(
+    final url = UrlLauncherService();
+
+    return DisplayBoxWidget(
       child: Column(
         children: [
           gapH32,

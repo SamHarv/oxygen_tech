@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 
 import '/content/portfolio_content.dart';
 import '/constants.dart';
-import '../widgets/custom_appbar_widget.dart';
+import '/widgets/custom_appbar_widget.dart';
 
-class Portfolio extends StatelessWidget {
-  const Portfolio({super.key});
+class PortfolioPage extends StatelessWidget {
+  const PortfolioPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: appDrawer,
-      appBar: const CustomAppBar(),
+      appBar: const CustomAppBarWidget(),
       body: Container(
         width: double.infinity,
         decoration: BoxDecoration(

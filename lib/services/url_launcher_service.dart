@@ -1,15 +1,15 @@
 import 'package:url_launcher/url_launcher.dart';
 
 class UrlLauncherService {
-  final Uri _plansUrl = Uri.parse(
+  final _plansUrl = Uri.parse(
       'https://play.google.com/store/apps/details?id=com.o2tech.plans&pcampaignid=web_share');
-  final Uri _moMUrl = Uri.parse('https://matterofmovement.com.au');
-  final Uri _digbyUrl = Uri.parse(
+  final _moMUrl = Uri.parse('https://matterofmovement.com.au');
+  final _digbyUrl = Uri.parse(
       'https://play.google.com/store/apps/details?id=com.samharvey.digby&pcampaignid=web_share');
-  final Uri _digbyWebUrl = Uri.parse('https://digbygame.com.au');
-  final Uri _brighterTomorrowUrl = Uri.parse('https://brightertomorrow.com.au');
-  final Uri _gitHubUrl = Uri.parse('https://github.com/SamHarv');
-  final Uri _linkedInUrl =
+  final _digbyWebUrl = Uri.parse('https://digbygame.com.au');
+  final _brighterTomorrowUrl = Uri.parse('https://brightertomorrow.com.au');
+  final _gitHubUrl = Uri.parse('https://github.com/SamHarv');
+  final _linkedInUrl =
       Uri.parse('https://www.linkedin.com/in/sam-harvey-83a182234/');
 
   Future<void> launchPlansUrl() async {

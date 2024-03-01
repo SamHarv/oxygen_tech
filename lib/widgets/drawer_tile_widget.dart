@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 
 import '/constants.dart';
 
-class DrawerListTile extends StatelessWidget {
+class DrawerTileWidget extends StatelessWidget {
   final String title;
   final IconData icon;
   final dynamic onTap;
 
-  const DrawerListTile({
+  const DrawerTileWidget({
     super.key,
     required this.title,
     required this.icon,

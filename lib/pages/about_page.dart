@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:oxygen_tech/content/about_content.dart';
 
 import '/constants.dart';
-import '../widgets/custom_appbar_widget.dart';
+import '/widgets/custom_appbar_widget.dart';
 
 class AboutPage extends StatelessWidget {
   const AboutPage({super.key});
@@ -11,7 +11,7 @@ class AboutPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: appDrawer,
-      appBar: const CustomAppBar(),
+      appBar: const CustomAppBarWidget(),
       body: Container(
         width: double.infinity,
         decoration: BoxDecoration(

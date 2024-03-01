@@ -3,8 +3,8 @@ import 'package:beamer/beamer.dart';
 
 import '/constants.dart';
 
-class AppBarMenuItem extends StatelessWidget {
-  const AppBarMenuItem({
+class AppBarMenuWidget extends StatelessWidget {
+  const AppBarMenuWidget({
     Key? key,
     required this.title,
     required this.route,

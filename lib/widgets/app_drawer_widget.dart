@@ -4,8 +4,8 @@ import 'package:beamer/beamer.dart';
 import 'drawer_tile_widget.dart';
 import '/constants.dart';
 
-class AppDrawer extends StatelessWidget {
-  const AppDrawer({super.key});
+class AppDrawerWidget extends StatelessWidget {
+  const AppDrawerWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,31 +21,31 @@ class AppDrawer extends StatelessWidget {
               child: Image.asset(fullLogo),
             ),
             const Divider(),
-            DrawerListTile(
+            DrawerTileWidget(
               title: 'Home',
               icon: Icons.home,
               onTap: () => Beamer.of(context).beamToNamed('/'),
             ),
             const Divider(),
-            DrawerListTile(
+            DrawerTileWidget(
               title: 'Portfolio',
               icon: Icons.apps,
               onTap: () => Beamer.of(context).beamToNamed('/portfolio'),
             ),
             const Divider(),
-            DrawerListTile(
+            DrawerTileWidget(
               title: 'Services',
               icon: Icons.devices,
               onTap: () => Beamer.of(context).beamToNamed('/services'),
             ),
             const Divider(),
-            DrawerListTile(
+            DrawerTileWidget(
               title: 'About',
               icon: Icons.info,
               onTap: () => Beamer.of(context).beamToNamed('/about'),
             ),
             const Divider(),
-            DrawerListTile(
+            DrawerTileWidget(
               title: 'Contact',
               icon: Icons.email,
               onTap: () => Beamer.of(context).beamToNamed('/contact'),

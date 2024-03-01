@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../widgets/contact_button_widget.dart';
-import '../widgets/display_box_widget.dart';
+import '/widgets/contact_button_widget.dart';
+import '/widgets/display_box_widget.dart';
 import '/constants.dart';
 
 class ServicesContent extends StatelessWidget {
@@ -9,7 +9,7 @@ class ServicesContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const DisplayBox(
+    return const DisplayBoxWidget(
       child: Padding(
         padding: kPadding,
         child: Column(
@@ -44,7 +44,7 @@ class ServicesContent extends StatelessWidget {
               style: bodyStyle,
             ),
             gapH32,
-            ContactButton(),
+            ContactButtonWidget(),
             gapH32,
             Text(
               'Tutoring',
@@ -67,7 +67,7 @@ class ServicesContent extends StatelessWidget {
               style: bodyStyle,
             ),
             gapH32,
-            ContactButton(),
+            ContactButtonWidget(),
           ],
         ),
       ),

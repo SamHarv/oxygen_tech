@@ -4,14 +4,15 @@ import 'package:beamer/beamer.dart';
 import '/constants.dart';
 import 'appbar_menu_widget.dart';
 
-class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const CustomAppBar({Key? key}) : super(key: key);
+class CustomAppBarWidget extends StatelessWidget
+    implements PreferredSizeWidget {
+  const CustomAppBarWidget({Key? key}) : super(key: key);
   @override
   Size get preferredSize => const Size.fromHeight(60.0);
 
   @override
   Widget build(BuildContext context) {
-    final double mediaWidth = MediaQuery.of(context).size.width;
+    final mediaWidth = MediaQuery.of(context).size.width;
     return AppBar(
       automaticallyImplyLeading: mediaWidth < 750 ? true : false,
       iconTheme: const IconThemeData(
@@ -23,7 +24,6 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
             ? InkWell(
                 child: Image.asset(
                   logo,
-                  fit: BoxFit.contain,
                   height: 50.0,
                 ),
                 onTap: () => Beamer.of(context).beamToNamed('/'),
@@ -40,19 +40,19 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                   ),
                   Row(
                     children: [
-                      const AppBarMenuItem(
+                      const AppBarMenuWidget(
                         title: 'Services',
                         route: '/services',
                       ),
-                      const AppBarMenuItem(
+                      const AppBarMenuWidget(
                         title: 'Portfolio',
                         route: '/portfolio',
                       ),
-                      const AppBarMenuItem(
+                      const AppBarMenuWidget(
                         title: 'About',
                         route: '/about',
                       ),
-                      const AppBarMenuItem(
+                      const AppBarMenuWidget(
                         title: 'Contact',
                         route: '/contact',
                       ),
@@ -66,7 +66,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                               color: colour,
                             ),
                           ),
-                          itemBuilder: (BuildContext context) {
+                          itemBuilder: (context) {
                             return [
                               const PopupMenuItem<String>(
                                 value: 'privacy',
@@ -84,13 +84,8 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                               ),
                             ];
                           },
-                          onSelected: (value) {
-                            if (value == 'privacy') {
-                              Beamer.of(context).beamToNamed('/privacy');
-                            } else if (value == 'terms') {
-                              Beamer.of(context).beamToNamed('/terms');
-                            }
-                          },
+                          onSelected: (value) =>
+                              Beamer.of(context).beamToNamed('/$value'),
                         ),
                       ),
                     ],

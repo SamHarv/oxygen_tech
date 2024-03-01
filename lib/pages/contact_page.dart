@@ -11,7 +11,7 @@ class ContactPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: appDrawer,
-      appBar: const CustomAppBar(),
+      appBar: const CustomAppBarWidget(),
       body: Container(
         width: double.infinity,
         decoration: BoxDecoration(

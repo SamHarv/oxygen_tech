@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../widgets/display_box_widget.dart';
-
+import '/widgets/display_box_widget.dart';
 import '/constants.dart';
 
 class AboutContent extends StatelessWidget {
@@ -9,7 +8,7 @@ class AboutContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const DisplayBox(
+    return const DisplayBoxWidget(
       child: Padding(
         padding: kPadding,
         child: Column(

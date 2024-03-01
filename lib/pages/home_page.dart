@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:oxygen_tech/content/services_content.dart';
 
+import '/content/services_content.dart';
 import '/content/about_content.dart';
 import '/content/portfolio_content.dart';
 import '/content/contact_content.dart';
-import '../widgets/display_box_widget.dart';
-import '../widgets/custom_appbar_widget.dart';
+import '/widgets/display_box_widget.dart';
+import '/widgets/custom_appbar_widget.dart';
 import '/constants.dart';
 
 class HomePage extends StatelessWidget {
@@ -13,10 +13,10 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final double mediaWidth = MediaQuery.of(context).size.width;
+    final mediaWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       drawer: appDrawer,
-      appBar: const CustomAppBar(),
+      appBar: const CustomAppBarWidget(),
       body: Container(
         width: double.infinity,
         decoration: BoxDecoration(
@@ -46,7 +46,7 @@ class HomePage extends StatelessWidget {
                         mediaWidth <= 750 ? mediaWidth * 0.8 : mediaWidth * 0.4,
                   ),
                   gapH64,
-                  DisplayBox(
+                  DisplayBoxWidget(
                     child: Column(
                       children: [
                         gapH64,
@@ -100,7 +100,7 @@ class HomePage extends StatelessWidget {
                         mediaWidth <= 750 ? mediaWidth * 0.8 : mediaWidth * 0.4,
                   ),
                   gapH64,
-                  DisplayBox(
+                  DisplayBoxWidget(
                     child: Padding(
                       padding: kPadding,
                       child: Column(
@@ -132,7 +132,7 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                   gapH32,
-                  DisplayBox(
+                  DisplayBoxWidget(
                     child: Padding(
                       padding: kPadding,
                       child: Column(

@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 
 import '/constants.dart';
 
-class ContactButton extends StatelessWidget {
-  const ContactButton({super.key});
+class ContactButtonWidget extends StatelessWidget {
+  const ContactButtonWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

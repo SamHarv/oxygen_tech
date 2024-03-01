@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '/content/services_content.dart';
 import '/constants.dart';
-import '../widgets/custom_appbar_widget.dart';
+import '/widgets/custom_appbar_widget.dart';
 
 class ServicesPage extends StatelessWidget {
   const ServicesPage({super.key});
@@ -11,7 +11,7 @@ class ServicesPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: appDrawer,
-      appBar: const CustomAppBar(),
+      appBar: const CustomAppBarWidget(),
       body: Container(
         width: double.infinity,
         decoration: BoxDecoration(

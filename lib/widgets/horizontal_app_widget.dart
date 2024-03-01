@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class HorizontalAppCard extends StatelessWidget {
-  final String screenshot;
+class HorizontalAppWidget extends StatelessWidget {
+  final String screenshotPath;
   final double width;
   final Function onTap;
 
-  const HorizontalAppCard({
+  const HorizontalAppWidget({
     super.key,
-    required this.screenshot,
+    required this.screenshotPath,
     required this.width,
     required this.onTap,
   });
@@ -17,7 +17,7 @@ class HorizontalAppCard extends StatelessWidget {
     return InkWell(
       onTap: () => onTap(),
       child: Image.asset(
-        screenshot,
+        screenshotPath,
         width: width,
       ),
     );
