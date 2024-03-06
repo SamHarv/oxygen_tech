@@ -1,0 +1,160 @@
+Date : 2024-03-01 12:39:12
+Directory : /Users/samharvey/AndroidStudioProjects/oxygen_tech
+Total : 76 files,  4048 codes, 258 comments, 395 blanks, all 4701 lines
+
+Languages
++-----------------+------------+------------+------------+------------+------------+
+| language        | files      | code       | comment    | blank      | total      |
++-----------------+------------+------------+------------+------------+------------+
+| Dart            |         24 |      1,497 |         13 |        114 |      1,624 |
+| JSON            |          8 |      1,250 |          0 |          8 |      1,258 |
+| C++             |         16 |        506 |        107 |        170 |        783 |
+| XML             |         10 |        487 |         34 |         10 |        531 |
+| Gradle          |          3 |         89 |          5 |         22 |        116 |
+| CSS             |          1 |         48 |          0 |          9 |         57 |
+| HTML            |          1 |         41 |         16 |          7 |         64 |
+| CMake           |          2 |         38 |          0 |         12 |         50 |
+| Swift           |          4 |         38 |          3 |         12 |         53 |
+| YAML            |          2 |         28 |         80 |         19 |        127 |
+| Markdown        |          2 |         13 |          0 |          9 |         22 |
+| Java Properties |          2 |          8 |          0 |          2 |         10 |
+| JavaScript      |          1 |          5 |          0 |          1 |          6 |
++-----------------+------------+------------+------------+------------+------------+
+
+Directories
++-----------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                                  | files      | code       | comment    | blank      | total      |
++-----------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                                     |         76 |      4,048 |        258 |        395 |      4,701 |
+| . (Files)                                                                                                             |          6 |      1,019 |         80 |         29 |      1,128 |
+| android                                                                                                               |         12 |        173 |         37 |         31 |        241 |
+| android (Files)                                                                                                       |          3 |         38 |          0 |         10 |         48 |
+| android/app                                                                                                           |          8 |        130 |         37 |         20 |        187 |
+| android/app (Files)                                                                                                   |          1 |         54 |          5 |         13 |         72 |
+| android/app/src                                                                                                       |          7 |         76 |         32 |          7 |        115 |
+| android/app/src/debug                                                                                                 |          1 |          4 |          4 |          1 |          9 |
+| android/app/src/main                                                                                                  |          5 |         68 |         24 |          5 |         97 |
+| android/app/src/main (Files)                                                                                          |          1 |         28 |          6 |          1 |         35 |
+| android/app/src/main/res                                                                                              |          4 |         40 |         18 |          4 |         62 |
+| android/app/src/main/res/drawable                                                                                     |          1 |          9 |          0 |          1 |         10 |
+| android/app/src/main/res/drawable-v21                                                                                 |          1 |          9 |          0 |          1 |         10 |
+| android/app/src/main/res/values                                                                                       |          1 |         13 |          9 |          1 |         23 |
+| android/app/src/main/res/values-night                                                                                 |          1 |          9 |          9 |          1 |         19 |
+| android/app/src/profile                                                                                               |          1 |          4 |          4 |          1 |          9 |
+| android/gradle                                                                                                        |          1 |          5 |          0 |          1 |          6 |
+| android/gradle/wrapper                                                                                                |          1 |          5 |          0 |          1 |          6 |
+| ios                                                                                                                   |          8 |        250 |          2 |         10 |        262 |
+| ios/Runner                                                                                                            |          8 |        250 |          2 |         10 |        262 |
+| ios/Runner (Files)                                                                                                    |          2 |         13 |          0 |          3 |         16 |
+| ios/Runner/Assets.xcassets                                                                                            |          4 |        169 |          0 |          5 |        174 |
+| ios/Runner/Assets.xcassets/AppIcon.appiconset                                                                         |          1 |        122 |          0 |          1 |        123 |
+| ios/Runner/Assets.xcassets/LaunchBackground.imageset                                                                  |          1 |         21 |          0 |          1 |         22 |
+| ios/Runner/Assets.xcassets/LaunchImage.imageset                                                                       |          2 |         26 |          0 |          3 |         29 |
+| ios/Runner/Base.lproj                                                                                                 |          2 |         68 |          2 |          2 |         72 |
+| lib                                                                                                                   |         23 |      1,483 |          3 |        107 |      1,593 |
+| lib (Files)                                                                                                           |          3 |        114 |          1 |         16 |        131 |
+| lib/content                                                                                                           |          4 |        440 |          2 |         18 |        460 |
+| lib/pages                                                                                                             |          7 |        543 |          0 |         28 |        571 |
+| lib/services                                                                                                          |          1 |         55 |          0 |         10 |         65 |
+| lib/widgets                                                                                                           |          8 |        331 |          0 |         35 |        366 |
+| linux                                                                                                                 |          6 |        117 |         27 |         44 |        188 |
+| linux (Files)                                                                                                         |          3 |         86 |         18 |         27 |        131 |
+| linux/flutter                                                                                                         |          3 |         31 |          9 |         17 |         57 |
+| macos                                                                                                                 |          5 |        437 |          3 |         12 |        452 |
+| macos/Flutter                                                                                                         |          1 |          6 |          3 |          4 |         13 |
+| macos/Runner                                                                                                          |          4 |        431 |          0 |          8 |        439 |
+| macos/Runner (Files)                                                                                                  |          2 |         20 |          0 |          6 |         26 |
+| macos/Runner/Assets.xcassets                                                                                          |          1 |         68 |          0 |          1 |         69 |
+| macos/Runner/Assets.xcassets/AppIcon.appiconset                                                                       |          1 |         68 |          0 |          1 |         69 |
+| macos/Runner/Base.lproj                                                                                               |          1 |        343 |          0 |          1 |        344 |
+| test                                                                                                                  |          1 |         14 |         10 |          7 |         31 |
+| web                                                                                                                   |          4 |        129 |         16 |         18 |        163 |
+| web (Files)                                                                                                           |          2 |         76 |         16 |          8 |        100 |
+| web/splash                                                                                                            |          2 |         53 |          0 |         10 |         63 |
+| windows                                                                                                               |         11 |        426 |         80 |        137 |        643 |
+| windows/flutter                                                                                                       |          3 |         30 |          9 |         17 |         56 |
+| windows/runner                                                                                                        |          8 |        396 |         71 |        120 |        587 |
++-----------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-----------------------------------------------------------------------------------------------------------------------+-----------------+------------+------------+------------+------------+
+| filename                                                                                                              | language        | code       | comment    | blank      | total      |
++-----------------------------------------------------------------------------------------------------------------------+-----------------+------------+------------+------------+------------+
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/README.md                                                          | Markdown        |         10 |          0 |          7 |         17 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/analysis_options.yaml                                              | YAML            |          3 |         23 |          4 |         30 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/android/app/build.gradle                                           | Gradle          |         54 |          5 |         13 |         72 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/android/app/src/debug/AndroidManifest.xml                          | XML             |          4 |          4 |          1 |          9 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/android/app/src/main/AndroidManifest.xml                           | XML             |         28 |          6 |          1 |         35 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/android/app/src/main/res/drawable-v21/launch_background.xml        | XML             |          9 |          0 |          1 |         10 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/android/app/src/main/res/drawable/launch_background.xml            | XML             |          9 |          0 |          1 |         10 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/android/app/src/main/res/values-night/styles.xml                   | XML             |          9 |          9 |          1 |         19 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/android/app/src/main/res/values/styles.xml                         | XML             |         13 |          9 |          1 |         23 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/android/app/src/profile/AndroidManifest.xml                        | XML             |          4 |          4 |          1 |          9 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/android/build.gradle                                               | Gradle          |         27 |          0 |          5 |         32 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/android/gradle.properties                                          | Java Properties |          3 |          0 |          1 |          4 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/android/gradle/wrapper/gradle-wrapper.properties                   | Java Properties |          5 |          0 |          1 |          6 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/android/settings.gradle                                            | Gradle          |          8 |          0 |          4 |         12 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/firebase.json                                                      | JSON            |         16 |          0 |          1 |         17 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/ios/Runner/AppDelegate.swift                                       | Swift           |         12 |          0 |          2 |         14 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json        | JSON            |        122 |          0 |          1 |        123 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/ios/Runner/Assets.xcassets/LaunchBackground.imageset/Contents.json | JSON            |         21 |          0 |          1 |         22 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json      | JSON            |         23 |          0 |          1 |         24 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/ios/Runner/Assets.xcassets/LaunchImage.imageset/README.md          | Markdown        |          3 |          0 |          2 |          5 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/ios/Runner/Base.lproj/LaunchScreen.storyboard                      | XML             |         43 |          1 |          1 |         45 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/ios/Runner/Base.lproj/Main.storyboard                              | XML             |         25 |          1 |          1 |         27 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/ios/Runner/Runner-Bridging-Header.h                                | C++             |          1 |          0 |          1 |          2 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/lib/constants.dart                                                 | Dart            |         21 |          0 |          8 |         29 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/lib/content/about_content.dart                                     | Dart            |         42 |          0 |          4 |         46 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/lib/content/contact_content.dart                                   | Dart            |        128 |          0 |          5 |        133 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/lib/content/portfolio_content.dart                                 | Dart            |        197 |          2 |          5 |        204 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/lib/content/services_content.dart                                  | Dart            |         73 |          0 |          4 |         77 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/lib/main.dart                                                      | Dart            |         20 |          1 |          5 |         26 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/lib/pages/about_page.dart                                          | Dart            |         38 |          0 |          4 |         42 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/lib/pages/contact_page.dart                                        | Dart            |         38 |          0 |          4 |         42 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/lib/pages/home_page.dart                                           | Dart            |        166 |          0 |          4 |        170 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/lib/pages/portfolio_page.dart                                      | Dart            |         38 |          0 |          4 |         42 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/lib/pages/privacy_page.dart                                        | Dart            |         68 |          0 |          4 |         72 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/lib/pages/services_page.dart                                       | Dart            |         38 |          0 |          4 |         42 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/lib/pages/terms_page.dart                                          | Dart            |        157 |          0 |          4 |        161 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/lib/routes.dart                                                    | Dart            |         73 |          0 |          3 |         76 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/lib/services/url_launcher_service.dart                             | Dart            |         55 |          0 |         10 |         65 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/lib/widgets/app_drawer_widget.dart                                 | Dart            |         83 |          0 |          4 |         87 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/lib/widgets/appbar_menu_widget.dart                                | Dart            |         25 |          0 |          5 |         30 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/lib/widgets/contact_button_widget.dart                             | Dart            |         22 |          0 |          4 |         26 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/lib/widgets/custom_appbar_widget.dart                              | Dart            |        107 |          0 |          4 |        111 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/lib/widgets/display_box_widget.dart                                | Dart            |         18 |          0 |          5 |         23 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/lib/widgets/drawer_tile_widget.dart                                | Dart            |         32 |          0 |          5 |         37 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/lib/widgets/horizontal_app_widget.dart                             | Dart            |         22 |          0 |          4 |         26 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/lib/widgets/vertical_app_widget.dart                               | Dart            |         22 |          0 |          4 |         26 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/linux/flutter/generated_plugin_registrant.cc                       | C++             |          7 |          4 |          5 |         16 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/linux/flutter/generated_plugin_registrant.h                        | C++             |          5 |          5 |          6 |         16 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/linux/flutter/generated_plugins.cmake                              | CMake           |         19 |          0 |          6 |         25 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/linux/main.cc                                                      | C++             |          5 |          0 |          2 |          7 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/linux/my_application.cc                                            | C++             |         74 |         11 |         20 |        105 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/linux/my_application.h                                             | C++             |          7 |          7 |          5 |         19 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/macos/Flutter/GeneratedPluginRegistrant.swift                      | Swift           |          6 |          3 |          4 |         13 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/macos/Runner/AppDelegate.swift                                     | Swift           |          8 |          0 |          2 |         10 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/macos/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json      | JSON            |         68 |          0 |          1 |         69 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/macos/Runner/Base.lproj/MainMenu.xib                               | XML             |        343 |          0 |          1 |        344 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/macos/Runner/MainFlutterWindow.swift                               | Swift           |         12 |          0 |          4 |         16 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/package-lock.json                                                  | JSON            |        960 |          0 |          1 |        961 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/package.json                                                       | JSON            |          5 |          0 |          1 |          6 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/pubspec.yaml                                                       | YAML            |         25 |         57 |         15 |         97 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/test/widget_test.dart                                              | Dart            |         14 |         10 |          7 |         31 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/web/index.html                                                     | HTML            |         41 |         16 |          7 |         64 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/web/manifest.json                                                  | JSON            |         35 |          0 |          1 |         36 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/web/splash/splash.js                                               | JavaScript      |          5 |          0 |          1 |          6 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/web/splash/style.css                                               | CSS             |         48 |          0 |          9 |         57 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/windows/flutter/generated_plugin_registrant.cc                     | C++             |          6 |          4 |          5 |         15 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/windows/flutter/generated_plugin_registrant.h                      | C++             |          5 |          5 |          6 |         16 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/windows/flutter/generated_plugins.cmake                            | CMake           |         19 |          0 |          6 |         25 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/windows/runner/flutter_window.cpp                                  | C++             |         45 |          4 |         13 |         62 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/windows/runner/flutter_window.h                                    | C++             |         20 |          5 |          9 |         34 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/windows/runner/main.cpp                                            | C++             |         30 |          4 |         10 |         44 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/windows/runner/resource.h                                          | C++             |          9 |          6 |          2 |         17 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/windows/runner/utils.cpp                                           | C++             |         53 |          2 |         10 |         65 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/windows/runner/utils.h                                             | C++             |          8 |          6 |          6 |         20 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/windows/runner/win32_window.cpp                                    | C++             |        183 |         15 |         48 |        246 |
+| /Users/samharvey/AndroidStudioProjects/oxygen_tech/windows/runner/win32_window.h                                      | C++             |         48 |         29 |         22 |         99 |
+| Total                                                                                                                 |                 |      4,048 |        258 |        395 |      4,701 |
++-----------------------------------------------------------------------------------------------------------------------+-----------------+------------+------------+------------+------------+

@@ -5,7 +5,7 @@ import '/constants.dart';
 class DrawerTileWidget extends StatelessWidget {
   final String title;
   final IconData icon;
-  final dynamic onTap;
+  final VoidCallback onTap;
 
   const DrawerTileWidget({
     super.key,
