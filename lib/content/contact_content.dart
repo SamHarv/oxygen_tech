@@ -50,18 +50,8 @@ class ContactContent extends StatelessWidget {
               alignment: WrapAlignment.center,
               children: [
                 IconButton(
-                  icon: const FaIcon(
-                    FontAwesomeIcons.youtube,
-                    color: Colors.grey,
-                  ),
-                  onPressed: () {},
-                ),
-                IconButton(
-                  icon: const FaIcon(
-                    FontAwesomeIcons.medium,
-                    color: Colors.grey,
-                  ),
-                  onPressed: () {},
+                  icon: const FaIcon(FontAwesomeIcons.youtube),
+                  onPressed: () => url.launchYouTubeUrl(),
                 ),
                 IconButton(
                   icon: const FaIcon(FontAwesomeIcons.github),
@@ -72,25 +62,12 @@ class ContactContent extends StatelessWidget {
                   onPressed: () => url.launchLinkedInUrl(),
                 ),
                 IconButton(
-                  icon: const FaIcon(
-                    FontAwesomeIcons.twitter,
-                    color: Colors.grey,
-                  ),
-                  onPressed: () {},
+                  icon: const FaIcon(FontAwesomeIcons.facebook),
+                  onPressed: () => url.launchFacebookUrl(),
                 ),
                 IconButton(
-                  icon: const FaIcon(
-                    FontAwesomeIcons.facebook,
-                    color: Colors.grey,
-                  ),
-                  onPressed: () {},
-                ),
-                IconButton(
-                  icon: const FaIcon(
-                    FontAwesomeIcons.instagram,
-                    color: Colors.grey,
-                  ),
-                  onPressed: () {},
+                  icon: const FaIcon(FontAwesomeIcons.instagram),
+                  onPressed: () => url.launchInstagramUrl(),
                 ),
               ],
             ),
