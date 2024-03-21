@@ -1,11 +1,11 @@
 {
-    "name": "oxygen_tech",
-    "short_name": "oxygen_tech",
+    "name": "Oxygen Tech",
+    "short_name": "Oxygen Tech",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "Software Developer based in Bendigo",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
