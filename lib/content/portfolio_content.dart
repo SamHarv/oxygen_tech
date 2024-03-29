@@ -41,11 +41,23 @@ class PortfolioContent extends StatelessWidget {
                     ),
                     gapH32,
                     VerticalAppWidget(
-                      onTap: url.launchPlansUrl,
+                      onTap: url.launchPlansAppStore,
                       screenshotPath: 'images/plans_tile.png',
                       height: mediaWidth < 750
                           ? mediaWidth * 0.9
                           : mediaWidth * 0.8,
+                    ),
+                    gapH16,
+                    VerticalAppWidget(
+                      screenshotPath: 'images/appstore.png',
+                      height: mediaWidth * 0.125,
+                      onTap: url.launchPlansAppStore,
+                    ),
+                    gapH16,
+                    VerticalAppWidget(
+                      screenshotPath: 'images/playstore.png',
+                      height: mediaWidth * 0.125,
+                      onTap: url.launchPlansUrl,
                     ),
                     gapH32,
                     const Text(
@@ -122,6 +134,18 @@ class PortfolioContent extends StatelessWidget {
                           height: mediaWidth < 750
                               ? (mediaWidth * 0.45) - 48
                               : (mediaWidth * 0.4) - 48,
+                        ),
+                        gapH16,
+                        VerticalAppWidget(
+                          screenshotPath: 'images/appstore.png',
+                          height: mediaWidth * 0.048,
+                          onTap: url.launchPlansAppStore,
+                        ),
+                        gapH16,
+                        VerticalAppWidget(
+                          screenshotPath: 'images/playstore.png',
+                          height: mediaWidth * 0.048,
+                          onTap: url.launchPlansUrl,
                         ),
                         gapH32,
                         const Text(

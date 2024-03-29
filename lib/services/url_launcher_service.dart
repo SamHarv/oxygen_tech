@@ -16,6 +16,8 @@ class UrlLauncherService {
       Uri.parse('https://www.facebook.com/profile.php?id=61557448528374');
   final _instagramUrl = Uri.parse(
       'https://www.instagram.com/o2tech2024?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==');
+  final _plansAppStore =
+      Uri.parse('https://apps.apple.com/us/app/plans/id6479982953');
 
   Future<void> launchPlansUrl() async {
     if (!await launchUrl(_plansUrl)) {
@@ -83,5 +85,11 @@ class UrlLauncherService {
       path: 'oxygentech@protonmail.com',
     );
     await launchUrl(emailLaunchUri);
+  }
+
+  void launchPlansAppStore() async {
+    if (!await launchUrl(_plansAppStore)) {
+      throw 'Could not launch $_plansAppStore';
+    }
   }
 }
