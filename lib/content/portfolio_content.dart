@@ -27,7 +27,7 @@ class PortfolioContent extends StatelessWidget {
             padding: kPadding,
             child: Text(
               'Click the tile to test the app through your browser or be '
-              'directed to the Play Store.',
+              'directed to the Play Store or App Store.',
               style: bodyStyle,
             ),
           ),

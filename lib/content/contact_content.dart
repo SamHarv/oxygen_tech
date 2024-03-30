@@ -54,20 +54,20 @@ class ContactContent extends StatelessWidget {
                   onPressed: () => url.launchYouTubeUrl(),
                 ),
                 IconButton(
-                  icon: const FaIcon(FontAwesomeIcons.github),
-                  onPressed: () => url.launchGitHubUrl(),
-                ),
-                IconButton(
-                  icon: const FaIcon(FontAwesomeIcons.linkedinIn),
-                  onPressed: () => url.launchLinkedInUrl(),
-                ),
-                IconButton(
                   icon: const FaIcon(FontAwesomeIcons.facebook),
                   onPressed: () => url.launchFacebookUrl(),
                 ),
                 IconButton(
                   icon: const FaIcon(FontAwesomeIcons.instagram),
                   onPressed: () => url.launchInstagramUrl(),
+                ),
+                IconButton(
+                  icon: const FaIcon(FontAwesomeIcons.github),
+                  onPressed: () => url.launchGitHubUrl(),
+                ),
+                IconButton(
+                  icon: const FaIcon(FontAwesomeIcons.linkedinIn),
+                  onPressed: () => url.launchLinkedInUrl(),
                 ),
               ],
             ),
