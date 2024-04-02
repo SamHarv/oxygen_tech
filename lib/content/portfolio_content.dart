@@ -95,13 +95,25 @@ class PortfolioContent extends StatelessWidget {
                     ),
                     gapH32,
                     HorizontalAppWidget(
-                      onTap: url.launchDigbyUrl,
+                      onTap: url.launchDigbyAppStore,
                       screenshotPath: 'images/digby_tile.png',
                       width: mediaWidth < 750
                           ? mediaWidth * 0.9
                           : mediaWidth * 0.8,
                     ),
-                    gapH32,
+                    gapH16,
+                    VerticalAppWidget(
+                      screenshotPath: 'images/appstore.png',
+                      height: mediaWidth * 0.125,
+                      onTap: url.launchDigbyAppStore,
+                    ),
+                    gapH16,
+                    VerticalAppWidget(
+                      screenshotPath: 'images/playstore.png',
+                      height: mediaWidth * 0.125,
+                      onTap: url.launchDigbyUrl,
+                    ),
+                    gapH16,
                     TextButton(
                       onPressed: url.launchDigbyWebUrl,
                       child: const Text(
@@ -129,7 +141,7 @@ class PortfolioContent extends StatelessWidget {
                         ),
                         gapH32,
                         VerticalAppWidget(
-                          onTap: url.launchPlansUrl,
+                          onTap: url.launchPlansAppStore,
                           screenshotPath: 'images/plans_tile.png',
                           height: mediaWidth < 750
                               ? (mediaWidth * 0.45) - 48
@@ -196,13 +208,25 @@ class PortfolioContent extends StatelessWidget {
                         ),
                         gapH32,
                         HorizontalAppWidget(
-                          onTap: url.launchDigbyUrl,
+                          onTap: url.launchDigbyAppStore,
                           screenshotPath: 'images/digby_tile.png',
                           width: mediaWidth < 750
                               ? (mediaWidth * 0.45) - 48
                               : (mediaWidth * 0.4) - 48,
                         ),
-                        gapH32,
+                        gapH16,
+                        VerticalAppWidget(
+                          screenshotPath: 'images/appstore.png',
+                          height: mediaWidth * 0.048,
+                          onTap: url.launchDigbyAppStore,
+                        ),
+                        gapH16,
+                        VerticalAppWidget(
+                          screenshotPath: 'images/playstore.png',
+                          height: mediaWidth * 0.048,
+                          onTap: url.launchDigbyUrl,
+                        ),
+                        gapH16,
                         TextButton(
                           onPressed: url.launchDigbyWebUrl,
                           child: const Text(

@@ -18,6 +18,8 @@ class UrlLauncherService {
       'https://www.instagram.com/o2tech2024?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==');
   final _plansAppStore =
       Uri.parse('https://apps.apple.com/us/app/plans/id6479982953');
+  final _digbyAppStore =
+      Uri.parse('https://apps.apple.com/us/app/digby/id6480343595');
 
   Future<void> launchPlansUrl() async {
     if (!await launchUrl(_plansUrl)) {
@@ -90,6 +92,12 @@ class UrlLauncherService {
   void launchPlansAppStore() async {
     if (!await launchUrl(_plansAppStore)) {
       throw 'Could not launch $_plansAppStore';
+    }
+  }
+
+  void launchDigbyAppStore() async {
+    if (!await launchUrl(_digbyAppStore)) {
+      throw 'Could not launch $_digbyAppStore';
     }
   }
 }
