@@ -18,6 +18,7 @@ class AppBarMenuWidget extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(16),
       child: InkWell(
+        borderRadius: BorderRadius.circular(32),
         child: Text(
           title,
           style: const TextStyle(color: colour),
