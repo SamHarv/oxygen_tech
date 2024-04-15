@@ -58,11 +58,11 @@ class HomePage extends StatelessWidget {
                         const Padding(
                           padding: kPadding,
                           child: Text(
-                            'Oxygen Tech, sometimes known as O2Tech offers a service to build simple, performant, multi-platform applications for both mobile (iOS & Android), and web (websites & web apps).\n\n'
+                            'Oxygen Tech, or O2Tech offers a service to build performant, multi-platform applications for both mobile (iOS & Android), and web (websites & web apps).\n\n'
                             'We leverage the Flutter framework\'s multi-platform technology to streamline the process of development which leads to greater efficiency for O2Tech, and cheaper prices for our clients.\n\n'
                             'We are based on Dja Dja Wurrung Country (Central Victoria), but offer services remotely Australia-wide.\n\n'
                             'With O2Tech, you will be dealing with the same developer throughout your journey, which will lead to a personalised approach.\n\n'
-                            'If you would like to get in touch and learn more, please scroll down to the Contact section.',
+                            'If you would like to get in touch and learn more, please click the orange button to navigate to our contact page.',
                             style: bodyStyle,
                           ),
                         ),

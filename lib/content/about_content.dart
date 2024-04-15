@@ -20,7 +20,7 @@ class AboutContent extends StatelessWidget {
             ),
             gapH32,
             Text(
-              'Oxygen Tech is comprised of just one guy and a combination of caffeine, a laptop, and epistemophilia (an excessive love of, or striving for, knowledge).\n\n'
+              'Oxygen Tech is comprised of one guy and a combination of caffeine, a laptop, and epistemophilia (an excessive love of, or striving for, knowledge).\n\n'
               'Oxygen Tech was established in 2023 by Sam Harvey, Flutter Developer who had the following to say:\n\n'
               '"Having transitioned from a career as an Exercise Physiologist to a Digital Health Consultant, I am becoming more and more enchanted with digital technology.\n\n'
               'In early 2020 I became interested in mobile application development due to gaps I saw in the mHealth industry, and began a course on Flutter development. What began as a hobby, is now evolving.\n\n'
