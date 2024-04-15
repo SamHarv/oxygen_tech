@@ -146,10 +146,13 @@ class HomePage extends StatelessWidget {
                             ],
                           ),
                           gapH32,
-                          const Text(
-                            'Oxygen Tech is committed to embracing diversity '
-                            'and welcomes all people.',
-                            style: bodyStyle,
+                          const Align(
+                            alignment: Alignment.centerLeft,
+                            child: Text(
+                              'Oxygen Tech is committed to embracing diversity '
+                              'and welcomes all people.',
+                              style: bodyStyle,
+                            ),
                           ),
                         ],
                       ),
