@@ -29,7 +29,7 @@ class ServicesPage extends StatelessWidget {
             child: Column(
               children: [
                 gapH32,
-                ServicesContent(),
+                ServicesContent(delay: 0),
                 gapH32,
               ],
             ),

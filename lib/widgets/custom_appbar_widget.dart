@@ -33,6 +33,7 @@ class CustomAppBarWidget extends StatelessWidget
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   InkWell(
+                    borderRadius: BorderRadius.circular(16),
                     child: Image.asset(
                       fullLogo,
                       height: 40.0,

@@ -29,7 +29,7 @@ class PortfolioPage extends StatelessWidget {
             child: Column(
               children: [
                 gapH32,
-                PortfolioContent(),
+                PortfolioContent(delay: 0),
                 gapH32,
               ],
             ),

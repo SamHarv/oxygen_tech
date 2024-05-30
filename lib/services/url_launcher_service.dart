@@ -20,10 +20,17 @@ class UrlLauncherService {
       Uri.parse('https://apps.apple.com/us/app/plans/id6479982953');
   final _digbyAppStore =
       Uri.parse('https://apps.apple.com/us/app/digby/id6480343595');
+  final _booklistUrl = Uri.parse('https://sam-s-book-list.web.app/');
 
   Future<void> launchPlansUrl() async {
     if (!await launchUrl(_plansUrl)) {
       throw 'Could not launch $_plansUrl';
+    }
+  }
+
+  Future<void> launchBooklistUrl() async {
+    if (!await launchUrl(_booklistUrl)) {
+      throw 'Could not launch $_booklistUrl';
     }
   }
 

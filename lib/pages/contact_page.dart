@@ -29,7 +29,7 @@ class ContactPage extends StatelessWidget {
             child: Column(
               children: [
                 gapH32,
-                ContactContent(),
+                ContactContent(delay: 0),
                 gapH32,
               ],
             ),
