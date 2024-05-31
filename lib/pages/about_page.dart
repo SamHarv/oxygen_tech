@@ -29,7 +29,7 @@ class AboutPage extends StatelessWidget {
             child: Column(
               children: [
                 gapH32,
-                AboutContent(delay: 0),
+                AboutContent(),
                 gapH32,
               ],
             ),

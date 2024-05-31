@@ -5,8 +5,7 @@ import '/widgets/display_box_widget.dart';
 import '/constants.dart';
 
 class TestimonialContent extends StatelessWidget {
-  final int delay;
-  const TestimonialContent({super.key, required this.delay});
+  const TestimonialContent({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,15 +15,13 @@ class TestimonialContent extends StatelessWidget {
         child: Column(
           children: [
             Animate(
-              effects: [
+              effects: const [
                 SlideEffect(
-                  delay: Duration(seconds: delay),
                   curve: Curves.easeIn,
-                  duration: const Duration(seconds: 3),
+                  duration: Duration(seconds: 3),
                 ),
                 FadeEffect(
-                  delay: Duration(seconds: delay),
-                  duration: const Duration(seconds: 3),
+                  duration: Duration(seconds: 3),
                 ),
               ],
               child: const Text(
@@ -35,15 +32,15 @@ class TestimonialContent extends StatelessWidget {
             ),
             gapH32,
             Animate(
-              effects: [
+              effects: const [
                 SlideEffect(
-                  delay: Duration(seconds: delay + 1),
+                  delay: Duration(seconds: 1),
                   curve: Curves.easeIn,
-                  duration: const Duration(seconds: 3),
+                  duration: Duration(seconds: 3),
                 ),
                 FadeEffect(
-                  delay: Duration(seconds: delay + 1),
-                  duration: const Duration(seconds: 3),
+                  delay: Duration(seconds: 1),
+                  duration: Duration(seconds: 3),
                 ),
               ],
               child: Column(

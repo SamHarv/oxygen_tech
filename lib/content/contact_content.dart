@@ -8,8 +8,7 @@ import '/widgets/display_box_widget.dart';
 import '/constants.dart';
 
 class ContactContent extends StatelessWidget {
-  final int delay;
-  const ContactContent({super.key, required this.delay});
+  const ContactContent({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,15 +19,13 @@ class ContactContent extends StatelessWidget {
         children: [
           gapH32,
           Animate(
-            effects: [
+            effects: const [
               SlideEffect(
-                delay: Duration(seconds: delay),
                 curve: Curves.easeIn,
-                duration: const Duration(seconds: 3),
+                duration: Duration(seconds: 3),
               ),
               FadeEffect(
-                delay: Duration(seconds: delay),
-                duration: const Duration(seconds: 3),
+                duration: Duration(seconds: 3),
               ),
             ],
             child: const Column(
@@ -50,15 +47,15 @@ class ContactContent extends StatelessWidget {
           ),
           gapH32,
           Animate(
-            effects: [
+            effects: const [
               SlideEffect(
-                delay: Duration(seconds: delay + 1),
+                delay: Duration(seconds: 1),
                 curve: Curves.easeIn,
-                duration: const Duration(seconds: 3),
+                duration: Duration(seconds: 3),
               ),
               FadeEffect(
-                delay: Duration(seconds: delay + 1),
-                duration: const Duration(seconds: 3),
+                delay: Duration(seconds: 1),
+                duration: Duration(seconds: 3),
               ),
             ],
             child: InkWell(
@@ -110,15 +107,15 @@ class ContactContent extends StatelessWidget {
             ),
           ),
           Animate(
-            effects: [
+            effects: const [
               SlideEffect(
-                delay: Duration(seconds: delay + 2),
+                delay: Duration(seconds: 2),
                 curve: Curves.easeIn,
-                duration: const Duration(seconds: 3),
+                duration: Duration(seconds: 3),
               ),
               FadeEffect(
-                delay: Duration(seconds: delay + 2),
-                duration: const Duration(seconds: 3),
+                delay: Duration(seconds: 2),
+                duration: Duration(seconds: 3),
               ),
             ],
             child: Padding(
@@ -167,15 +164,15 @@ class ContactContent extends StatelessWidget {
             ),
           ),
           Animate(
-            effects: [
+            effects: const [
               SlideEffect(
-                delay: Duration(seconds: delay + 3),
+                delay: Duration(seconds: 3),
                 curve: Curves.easeIn,
-                duration: const Duration(seconds: 3),
+                duration: Duration(seconds: 3),
               ),
               FadeEffect(
-                delay: Duration(seconds: delay + 3),
-                duration: const Duration(seconds: 3),
+                delay: Duration(seconds: 3),
+                duration: Duration(seconds: 3),
               ),
             ],
             child: Row(

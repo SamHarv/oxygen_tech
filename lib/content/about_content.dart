@@ -5,8 +5,7 @@ import '/widgets/display_box_widget.dart';
 import '/constants.dart';
 
 class AboutContent extends StatelessWidget {
-  final int delay;
-  const AboutContent({super.key, required this.delay});
+  const AboutContent({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,15 +15,13 @@ class AboutContent extends StatelessWidget {
         child: Column(
           children: [
             Animate(
-              effects: [
+              effects: const [
                 SlideEffect(
-                  delay: Duration(seconds: delay),
                   curve: Curves.easeIn,
-                  duration: const Duration(seconds: 3),
+                  duration: Duration(seconds: 3),
                 ),
                 FadeEffect(
-                  delay: Duration(seconds: delay),
-                  duration: const Duration(seconds: 3),
+                  duration: Duration(seconds: 3),
                 ),
               ],
               child: const Column(
@@ -51,15 +48,15 @@ class AboutContent extends StatelessWidget {
             ),
             gapH32,
             Animate(
-              effects: [
+              effects: const [
                 SlideEffect(
-                  delay: Duration(seconds: delay + 1),
+                  delay: Duration(seconds: 2),
                   curve: Curves.easeIn,
-                  duration: const Duration(seconds: 3),
+                  duration: Duration(seconds: 3),
                 ),
                 FadeEffect(
-                  delay: Duration(seconds: delay + 1),
-                  duration: const Duration(seconds: 3),
+                  delay: Duration(seconds: 2),
+                  duration: Duration(seconds: 3),
                 ),
               ],
               child: const CircleAvatar(

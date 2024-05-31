@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+// import 'package:flutter_animate_on_scroll/flutter_animate_on_scroll.dart';
+import 'package:oxygen_tech/content/services_content.dart';
+import 'package:oxygen_tech/utils.dart';
 
+import '../animations/fade_in_left.dart';
+import '../animations/fade_in_right.dart';
+import '../animations/fade_in_up.dart';
 import '../content/testimonial_content.dart';
-import '/content/services_content.dart';
 import '/content/about_content.dart';
 import '/content/portfolio_content.dart';
 import '/content/contact_content.dart';
@@ -18,11 +23,22 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  bool introTextInvisible = true;
+  final _display2Key = GlobalKey();
+  final _servicesKey = GlobalKey();
+  final _display5Key = GlobalKey();
+  final _portfolioKey = GlobalKey();
+  final _booklistKey = GlobalKey();
+  final _testimonialKey = GlobalKey();
+  final _display3Key = GlobalKey();
+  final _aboutKey = GlobalKey();
+  final _display4Key = GlobalKey();
+  final _ackKey = GlobalKey();
+  final _prideKey = GlobalKey();
+  final _contactKey = GlobalKey();
 
   @override
   Widget build(BuildContext context) {
-    final scrollController = ScrollController();
+    setState(() {});
     final mediaWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       drawer: appDrawer,
@@ -47,7 +63,7 @@ class _HomePageState extends State<HomePage> {
               width: mediaWidth <= 750 ? mediaWidth * 0.8 : mediaWidth * 0.4,
             ),
             SingleChildScrollView(
-              controller: scrollController,
+              controller: context.scrollController,
               child: Column(
                 children: <Widget>[
                   gapH64,
@@ -119,18 +135,9 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   gapH64,
-                  Animate(
-                    effects: const [
-                      SlideEffect(
-                        delay: Duration(seconds: 5),
-                        curve: Curves.easeIn,
-                        duration: Duration(seconds: 3),
-                      ),
-                      FadeEffect(
-                        delay: Duration(seconds: 5),
-                        duration: Duration(seconds: 3),
-                      ),
-                    ],
+                  FadeInUp(
+                    globalKey: _display2Key,
+                    duration: const Duration(seconds: 3),
                     child: Image.asset(
                       "images/display_2.png",
                       width: mediaWidth <= 750
@@ -139,20 +146,15 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   gapH64,
-                  const ServicesContent(delay: 7),
+                  FadeInUp(
+                    globalKey: _servicesKey,
+                    duration: const Duration(seconds: 3),
+                    child: const ServicesContent(),
+                  ),
                   gapH64,
-                  Animate(
-                    effects: const [
-                      SlideEffect(
-                        delay: Duration(seconds: 13),
-                        curve: Curves.easeIn,
-                        duration: Duration(seconds: 3),
-                      ),
-                      FadeEffect(
-                        delay: Duration(seconds: 13),
-                        duration: Duration(seconds: 3),
-                      ),
-                    ],
+                  FadeInLeft(
+                    globalKey: _display5Key,
+                    duration: const Duration(seconds: 3),
                     child: Image.asset(
                       "images/display_5.png",
                       width: mediaWidth <= 750
@@ -161,20 +163,15 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   gapH64,
-                  const PortfolioContent(delay: 15),
+                  FadeInUp(
+                    globalKey: _portfolioKey,
+                    duration: const Duration(seconds: 3),
+                    child: const PortfolioContent(),
+                  ),
                   gapH64,
-                  Animate(
-                    effects: const [
-                      SlideEffect(
-                        delay: Duration(seconds: 23),
-                        curve: Curves.easeIn,
-                        duration: Duration(seconds: 3),
-                      ),
-                      FadeEffect(
-                        delay: Duration(seconds: 23),
-                        duration: Duration(seconds: 3),
-                      ),
-                    ],
+                  FadeInRight(
+                    globalKey: _booklistKey,
+                    duration: const Duration(seconds: 3),
                     child: Image.asset(
                       "images/booklist.png",
                       width: mediaWidth <= 750
@@ -183,20 +180,15 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   gapH64,
-                  const TestimonialContent(delay: 25),
+                  FadeInUp(
+                    globalKey: _testimonialKey,
+                    duration: const Duration(seconds: 3),
+                    child: const TestimonialContent(),
+                  ),
                   gapH64,
-                  Animate(
-                    effects: const [
-                      SlideEffect(
-                        delay: Duration(seconds: 28),
-                        curve: Curves.easeIn,
-                        duration: Duration(seconds: 3),
-                      ),
-                      FadeEffect(
-                        delay: Duration(seconds: 28),
-                        duration: Duration(seconds: 3),
-                      ),
-                    ],
+                  FadeInUp(
+                    globalKey: _display3Key,
+                    duration: const Duration(seconds: 3),
                     child: Image.asset(
                       "images/display_3.png",
                       width: mediaWidth <= 750
@@ -205,20 +197,15 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   gapH64,
-                  const AboutContent(delay: 30),
+                  FadeInUp(
+                    globalKey: _aboutKey,
+                    duration: const Duration(seconds: 3),
+                    child: const AboutContent(),
+                  ),
                   gapH64,
-                  Animate(
-                    effects: const [
-                      SlideEffect(
-                        delay: Duration(seconds: 34),
-                        curve: Curves.easeIn,
-                        duration: Duration(seconds: 3),
-                      ),
-                      FadeEffect(
-                        delay: Duration(seconds: 34),
-                        duration: Duration(seconds: 3),
-                      ),
-                    ],
+                  FadeInUp(
+                    globalKey: _display4Key,
+                    duration: const Duration(seconds: 3),
                     child: Image.asset(
                       "images/display_4.png",
                       width: mediaWidth <= 750
@@ -227,18 +214,9 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   gapH64,
-                  Animate(
-                    effects: const [
-                      SlideEffect(
-                        delay: Duration(seconds: 36),
-                        curve: Curves.easeIn,
-                        duration: Duration(seconds: 3),
-                      ),
-                      FadeEffect(
-                        delay: Duration(seconds: 36),
-                        duration: Duration(seconds: 3),
-                      ),
-                    ],
+                  FadeInLeft(
+                    globalKey: _ackKey,
+                    duration: const Duration(seconds: 3),
                     child: DisplayBoxWidget(
                       child: Padding(
                         padding: kPadding,
@@ -272,18 +250,9 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   gapH32,
-                  Animate(
-                    effects: const [
-                      SlideEffect(
-                        delay: Duration(seconds: 38),
-                        curve: Curves.easeIn,
-                        duration: Duration(seconds: 3),
-                      ),
-                      FadeEffect(
-                        delay: Duration(seconds: 38),
-                        duration: Duration(seconds: 3),
-                      ),
-                    ],
+                  FadeInRight(
+                    globalKey: _prideKey,
+                    duration: const Duration(seconds: 3),
                     child: DisplayBoxWidget(
                       child: Padding(
                         padding: kPadding,
@@ -312,7 +281,11 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   gapH32,
-                  const ContactContent(delay: 40),
+                  FadeInUp(
+                    globalKey: _contactKey,
+                    duration: const Duration(seconds: 3),
+                    child: const ContactContent(),
+                  ),
                   mediaWidth <= 750 ? gapH32 : gapH64,
                 ],
               ),

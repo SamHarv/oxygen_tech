@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '/content/services_content.dart';
+import '../content/services_content.dart';
+
 import '/constants.dart';
 import '/widgets/custom_appbar_widget.dart';
 
@@ -29,7 +30,7 @@ class ServicesPage extends StatelessWidget {
             child: Column(
               children: [
                 gapH32,
-                ServicesContent(delay: 0),
+                ServicesContent(),
                 gapH32,
               ],
             ),
