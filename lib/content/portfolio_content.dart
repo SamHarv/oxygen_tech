@@ -19,276 +19,253 @@ class PortfolioContent extends StatelessWidget {
       child: Column(
         children: [
           gapH32,
-          Animate(
-            effects: const [
-              SlideEffect(
-                curve: Curves.easeIn,
-                duration: Duration(seconds: 3),
+          const Column(
+            children: [
+              Text(
+                'Portfolio',
+                textAlign: TextAlign.center,
+                style: headingStyle,
               ),
-              FadeEffect(
-                duration: Duration(seconds: 3),
+              Padding(
+                padding: kPadding,
+                child: Text(
+                  'Click the tile to test the app through your browser or be '
+                  'directed to the Play Store or App Store.',
+                  style: bodyStyle,
+                ),
               ),
             ],
-            child: const Column(
-              children: [
-                Text(
-                  'Portfolio',
-                  textAlign: TextAlign.center,
-                  style: headingStyle,
-                ),
-                Padding(
-                  padding: kPadding,
-                  child: Text(
-                    'Click the tile to test the app through your browser or be '
-                    'directed to the Play Store or App Store.',
-                    style: bodyStyle,
-                  ),
-                ),
-              ],
-            ),
-          ),
+          )
+              .animate()
+              .slide(duration: const Duration(seconds: 3))
+              .fade(duration: const Duration(seconds: 3)),
           mediaWidth < 750
               ? Column(
                   children: [
-                    Animate(
-                      effects: const [
-                        SlideEffect(
-                          delay: Duration(seconds: 1),
-                          curve: Curves.easeIn,
-                          duration: Duration(seconds: 3),
+                    Column(
+                      children: [
+                        const Text(
+                          'Sam\'s Booklist',
+                          textAlign: TextAlign.center,
+                          style: headingStyle,
                         ),
-                        FadeEffect(
-                          delay: Duration(seconds: 1),
-                          duration: Duration(seconds: 3),
+                        gapH32,
+                        VerticalAppWidget(
+                          onTap: url.launchBooklistUrl,
+                          screenshotPath: 'images/booklist.png',
+                          height: mediaWidth < 750
+                              ? mediaWidth * 0.9
+                              : mediaWidth * 0.8,
                         ),
                       ],
-                      child: Column(
-                        children: [
-                          const Text(
-                            'Sam\'s Booklist',
-                            textAlign: TextAlign.center,
-                            style: headingStyle,
-                          ),
-                          gapH32,
-                          VerticalAppWidget(
-                            onTap: url.launchBooklistUrl,
-                            screenshotPath: 'images/booklist.png',
-                            height: mediaWidth < 750
-                                ? mediaWidth * 0.9
-                                : mediaWidth * 0.8,
-                          ),
-                        ],
-                      ),
-                    ),
+                    )
+                        .animate()
+                        .slideX(
+                          duration: const Duration(seconds: 3),
+                          delay: const Duration(seconds: 1),
+                          // right to left
+                          begin: 0.5,
+                          end: 0,
+                        )
+                        .fade(
+                          duration: const Duration(seconds: 3),
+                          delay: const Duration(seconds: 1),
+                        ),
                     gapH32,
-                    Animate(
-                      effects: const [
-                        SlideEffect(
-                          delay: Duration(seconds: 2),
-                          curve: Curves.easeIn,
-                          duration: Duration(seconds: 3),
+                    Column(
+                      children: [
+                        const Text(
+                          'Plans',
+                          textAlign: TextAlign.center,
+                          style: headingStyle,
                         ),
-                        FadeEffect(
-                          delay: Duration(seconds: 2),
-                          duration: Duration(seconds: 3),
+                        gapH32,
+                        VerticalAppWidget(
+                          onTap: url.launchPlansAppStore,
+                          screenshotPath: 'images/plans_tile.png',
+                          height: mediaWidth < 750
+                              ? mediaWidth * 0.9
+                              : mediaWidth * 0.8,
+                        ),
+                        gapH16,
+                        VerticalAppWidget(
+                          screenshotPath: 'images/appstore.png',
+                          height: mediaWidth * 0.125,
+                          onTap: url.launchPlansAppStore,
+                        ),
+                        gapH16,
+                        VerticalAppWidget(
+                          screenshotPath: 'images/playstore.png',
+                          height: mediaWidth * 0.125,
+                          onTap: url.launchPlansUrl,
                         ),
                       ],
-                      child: Column(
-                        children: [
-                          const Text(
-                            'Plans',
-                            textAlign: TextAlign.center,
-                            style: headingStyle,
-                          ),
-                          gapH32,
-                          VerticalAppWidget(
-                            onTap: url.launchPlansAppStore,
-                            screenshotPath: 'images/plans_tile.png',
-                            height: mediaWidth < 750
-                                ? mediaWidth * 0.9
-                                : mediaWidth * 0.8,
-                          ),
-                          gapH16,
-                          VerticalAppWidget(
-                            screenshotPath: 'images/appstore.png',
-                            height: mediaWidth * 0.125,
-                            onTap: url.launchPlansAppStore,
-                          ),
-                          gapH16,
-                          VerticalAppWidget(
-                            screenshotPath: 'images/playstore.png',
-                            height: mediaWidth * 0.125,
-                            onTap: url.launchPlansUrl,
-                          ),
-                        ],
-                      ),
-                    ),
+                    )
+                        .animate()
+                        .slideX(
+                          duration: const Duration(seconds: 3),
+                          delay: const Duration(seconds: 2),
+                        )
+                        .fade(
+                          duration: const Duration(seconds: 3),
+                          delay: const Duration(seconds: 2),
+                        ),
                     gapH32,
-                    Animate(
-                      effects: const [
-                        SlideEffect(
-                          delay: Duration(seconds: 3),
-                          curve: Curves.easeIn,
-                          duration: Duration(seconds: 3),
+                    Column(
+                      children: [
+                        const Text(
+                          'Task Management App',
+                          textAlign: TextAlign.center,
+                          style: headingStyle,
                         ),
-                        FadeEffect(
-                          delay: Duration(seconds: 3),
-                          duration: Duration(seconds: 3),
+                        gapH32,
+                        VerticalAppWidget(
+                          onTap: () {
+                            showDialog(
+                                context: context,
+                                builder: (context) {
+                                  return AlertDialog(
+                                    title: const Text('Task Management App'),
+                                    content: const Text(
+                                        'This app is currently in development.'),
+                                    actions: [
+                                      TextButton(
+                                        onPressed: () {
+                                          Navigator.of(context).pop();
+                                        },
+                                        child: const Text('Close'),
+                                      ),
+                                    ],
+                                  );
+                                });
+                          },
+                          screenshotPath: 'images/planner.png',
+                          height: mediaWidth < 750
+                              ? mediaWidth * 0.9
+                              : mediaWidth * 0.8,
                         ),
                       ],
-                      child: Column(
-                        children: [
-                          const Text(
-                            'Task Management App',
-                            textAlign: TextAlign.center,
-                            style: headingStyle,
-                          ),
-                          gapH32,
-                          VerticalAppWidget(
-                            onTap: () {
-                              showDialog(
-                                  context: context,
-                                  builder: (context) {
-                                    return AlertDialog(
-                                      title: const Text('Task Management App'),
-                                      content: const Text(
-                                          'This app is currently in development.'),
-                                      actions: [
-                                        TextButton(
-                                          onPressed: () {
-                                            Navigator.of(context).pop();
-                                          },
-                                          child: const Text('Close'),
-                                        ),
-                                      ],
-                                    );
-                                  });
-                            },
-                            screenshotPath: 'images/planner.png',
-                            height: mediaWidth < 750
-                                ? mediaWidth * 0.9
-                                : mediaWidth * 0.8,
-                          ),
-                        ],
-                      ),
-                    ),
+                    )
+                        .animate()
+                        .slideX(
+                          duration: const Duration(seconds: 3),
+                          delay: const Duration(seconds: 3),
+                          // right to left
+                          begin: 0.5,
+                          end: 0,
+                        )
+                        .fade(
+                          duration: const Duration(seconds: 3),
+                          delay: const Duration(seconds: 3),
+                        ),
                     gapH32,
-                    Animate(
-                      effects: const [
-                        SlideEffect(
-                          delay: Duration(seconds: 4),
-                          curve: Curves.easeIn,
-                          duration: Duration(seconds: 3),
+                    Column(
+                      children: [
+                        const Text(
+                          'Brighter Tomorrow',
+                          textAlign: TextAlign.center,
+                          style: headingStyle,
                         ),
-                        FadeEffect(
-                          delay: Duration(seconds: 4),
-                          duration: Duration(seconds: 3),
+                        gapH32,
+                        VerticalAppWidget(
+                          onTap: url.launchBrighterTomorrowUrl,
+                          screenshotPath: 'images/brighter_tomorrow_tile.png',
+                          height: mediaWidth < 750
+                              ? mediaWidth * 0.9
+                              : mediaWidth * 0.8,
                         ),
                       ],
-                      child: Column(
-                        children: [
-                          const Text(
-                            'Brighter Tomorrow',
-                            textAlign: TextAlign.center,
-                            style: headingStyle,
-                          ),
-                          gapH32,
-                          VerticalAppWidget(
-                            onTap: url.launchBrighterTomorrowUrl,
-                            screenshotPath: 'images/brighter_tomorrow_tile.png',
-                            height: mediaWidth < 750
-                                ? mediaWidth * 0.9
-                                : mediaWidth * 0.8,
-                          ),
-                        ],
-                      ),
-                    ),
+                    )
+                        .animate()
+                        .slideX(
+                          duration: const Duration(seconds: 3),
+                          delay: const Duration(seconds: 4),
+                        )
+                        .fade(
+                          duration: const Duration(seconds: 3),
+                          delay: const Duration(seconds: 4),
+                        ),
                     gapH32,
-                    Animate(
-                      effects: const [
-                        SlideEffect(
-                          delay: Duration(seconds: 5),
-                          curve: Curves.easeIn,
-                          duration: Duration(seconds: 3),
+                    Column(
+                      children: [
+                        const Text(
+                          'Matter of Movement',
+                          textAlign: TextAlign.center,
+                          style: headingStyle,
                         ),
-                        FadeEffect(
-                          delay: Duration(seconds: 5),
-                          duration: Duration(seconds: 3),
+                        gapH32,
+                        VerticalAppWidget(
+                          onTap: url.launchMoMUrl,
+                          screenshotPath: 'images/MoM_tile_dark.png',
+                          height: mediaWidth < 750
+                              ? mediaWidth * 0.9
+                              : mediaWidth * 0.8,
                         ),
                       ],
-                      child: Column(
-                        children: [
-                          const Text(
-                            'Matter of Movement',
-                            textAlign: TextAlign.center,
-                            style: headingStyle,
-                          ),
-                          gapH32,
-                          VerticalAppWidget(
-                            onTap: url.launchMoMUrl,
-                            screenshotPath: 'images/MoM_tile_dark.png',
-                            height: mediaWidth < 750
-                                ? mediaWidth * 0.9
-                                : mediaWidth * 0.8,
-                          ),
-                        ],
-                      ),
-                    ),
+                    )
+                        .animate()
+                        .slideX(
+                          duration: const Duration(seconds: 3),
+                          delay: const Duration(seconds: 5),
+                          // right to left
+                          begin: 0.5,
+                          end: 0,
+                        )
+                        .fade(
+                          duration: const Duration(seconds: 3),
+                          delay: const Duration(seconds: 5),
+                        ),
                     gapH32,
-                    Animate(
-                      effects: const [
-                        SlideEffect(
-                          delay: Duration(seconds: 6),
-                          curve: Curves.easeIn,
-                          duration: Duration(seconds: 3),
+                    Column(
+                      children: [
+                        const Text(
+                          'Digby',
+                          textAlign: TextAlign.center,
+                          style: headingStyle,
                         ),
-                        FadeEffect(
-                          delay: Duration(seconds: 6),
-                          duration: Duration(seconds: 3),
+                        gapH32,
+                        HorizontalAppWidget(
+                          onTap: url.launchDigbyAppStore,
+                          screenshotPath: 'images/digby_tile.png',
+                          width: mediaWidth < 750
+                              ? mediaWidth * 0.9
+                              : mediaWidth * 0.8,
                         ),
-                      ],
-                      child: Column(
-                        children: [
-                          const Text(
-                            'Digby',
-                            textAlign: TextAlign.center,
-                            style: headingStyle,
-                          ),
-                          gapH32,
-                          HorizontalAppWidget(
-                            onTap: url.launchDigbyAppStore,
-                            screenshotPath: 'images/digby_tile.png',
-                            width: mediaWidth < 750
-                                ? mediaWidth * 0.9
-                                : mediaWidth * 0.8,
-                          ),
-                          gapH16,
-                          VerticalAppWidget(
-                            screenshotPath: 'images/appstore.png',
-                            height: mediaWidth * 0.125,
-                            onTap: url.launchDigbyAppStore,
-                          ),
-                          gapH16,
-                          VerticalAppWidget(
-                            screenshotPath: 'images/playstore.png',
-                            height: mediaWidth * 0.125,
-                            onTap: url.launchDigbyUrl,
-                          ),
-                          gapH16,
-                          TextButton(
-                            onPressed: url.launchDigbyWebUrl,
-                            child: const Text(
-                              'Play Digby in your browser',
-                              style: TextStyle(
-                                fontSize: 16.0,
-                                color: colour,
-                                decoration: TextDecoration.underline,
-                              ),
+                        gapH16,
+                        VerticalAppWidget(
+                          screenshotPath: 'images/appstore.png',
+                          height: mediaWidth * 0.125,
+                          onTap: url.launchDigbyAppStore,
+                        ),
+                        gapH16,
+                        VerticalAppWidget(
+                          screenshotPath: 'images/playstore.png',
+                          height: mediaWidth * 0.125,
+                          onTap: url.launchDigbyUrl,
+                        ),
+                        gapH16,
+                        TextButton(
+                          onPressed: url.launchDigbyWebUrl,
+                          child: const Text(
+                            'Play Digby in your browser',
+                            style: TextStyle(
+                              fontSize: 16.0,
+                              color: colour,
+                              decoration: TextDecoration.underline,
                             ),
                           ),
-                        ],
-                      ),
-                    ),
+                        ),
+                      ],
+                    )
+                        .animate()
+                        .slideX(
+                          duration: const Duration(seconds: 3),
+                          delay: const Duration(seconds: 6),
+                        )
+                        .fade(
+                          duration: const Duration(seconds: 3),
+                          delay: const Duration(seconds: 6),
+                        ),
                     gapH32,
                   ],
                 )
@@ -298,110 +275,98 @@ class PortfolioContent extends StatelessWidget {
                     gapW32,
                     Column(
                       children: [
-                        Animate(
-                          effects: const [
-                            SlideEffect(
-                              delay: Duration(seconds: 1),
-                              curve: Curves.easeIn,
-                              duration: Duration(seconds: 3),
+                        Column(
+                          children: [
+                            const Text(
+                              'Sam\'s Booklist',
+                              textAlign: TextAlign.center,
+                              style: headingStyle,
                             ),
-                            FadeEffect(
-                              delay: Duration(seconds: 1),
-                              duration: Duration(seconds: 3),
+                            gapH32,
+                            VerticalAppWidget(
+                              onTap: url.launchBooklistUrl,
+                              screenshotPath: 'images/booklist.png',
+                              height: mediaWidth < 750
+                                  ? (mediaWidth * 0.45) - 48
+                                  : (mediaWidth * 0.4) - 48,
                             ),
                           ],
-                          child: Column(
-                            children: [
-                              const Text(
-                                'Sam\'s Booklist',
-                                textAlign: TextAlign.center,
-                                style: headingStyle,
-                              ),
-                              gapH32,
-                              VerticalAppWidget(
-                                onTap: url.launchBooklistUrl,
-                                screenshotPath: 'images/booklist.png',
-                                height: mediaWidth < 750
-                                    ? (mediaWidth * 0.45) - 48
-                                    : (mediaWidth * 0.4) - 48,
-                              ),
-                            ],
-                          ),
-                        ),
+                        )
+                            .animate()
+                            .slideX(
+                              duration: const Duration(seconds: 3),
+                              delay: const Duration(seconds: 1),
+                            )
+                            .fade(
+                              duration: const Duration(seconds: 3),
+                              delay: const Duration(seconds: 1),
+                            ),
                         gapH32,
-                        Animate(
-                          effects: const [
-                            SlideEffect(
-                              delay: Duration(seconds: 3),
-                              curve: Curves.easeIn,
-                              duration: Duration(seconds: 3),
+                        Column(
+                          children: [
+                            const Text(
+                              'Plans',
+                              textAlign: TextAlign.center,
+                              style: headingStyle,
                             ),
-                            FadeEffect(
-                              delay: Duration(seconds: 3),
-                              duration: Duration(seconds: 3),
+                            gapH32,
+                            VerticalAppWidget(
+                              onTap: url.launchPlansAppStore,
+                              screenshotPath: 'images/plans_tile.png',
+                              height: mediaWidth < 750
+                                  ? (mediaWidth * 0.45) - 48
+                                  : (mediaWidth * 0.4) - 48,
+                            ),
+                            gapH16,
+                            VerticalAppWidget(
+                              screenshotPath: 'images/appstore.png',
+                              height: mediaWidth * 0.048,
+                              onTap: url.launchPlansAppStore,
+                            ),
+                            gapH16,
+                            VerticalAppWidget(
+                              screenshotPath: 'images/playstore.png',
+                              height: mediaWidth * 0.048,
+                              onTap: url.launchPlansUrl,
                             ),
                           ],
-                          child: Column(
-                            children: [
-                              const Text(
-                                'Plans',
-                                textAlign: TextAlign.center,
-                                style: headingStyle,
-                              ),
-                              gapH32,
-                              VerticalAppWidget(
-                                onTap: url.launchPlansAppStore,
-                                screenshotPath: 'images/plans_tile.png',
-                                height: mediaWidth < 750
-                                    ? (mediaWidth * 0.45) - 48
-                                    : (mediaWidth * 0.4) - 48,
-                              ),
-                              gapH16,
-                              VerticalAppWidget(
-                                screenshotPath: 'images/appstore.png',
-                                height: mediaWidth * 0.048,
-                                onTap: url.launchPlansAppStore,
-                              ),
-                              gapH16,
-                              VerticalAppWidget(
-                                screenshotPath: 'images/playstore.png',
-                                height: mediaWidth * 0.048,
-                                onTap: url.launchPlansUrl,
-                              ),
-                            ],
-                          ),
-                        ),
+                        )
+                            .animate()
+                            .slideX(
+                              duration: const Duration(seconds: 3),
+                              delay: const Duration(seconds: 3),
+                            )
+                            .fade(
+                              duration: const Duration(seconds: 3),
+                              delay: const Duration(seconds: 3),
+                            ),
                         gapH32,
-                        Animate(
-                          effects: const [
-                            SlideEffect(
-                              delay: Duration(seconds: 6),
-                              curve: Curves.easeIn,
-                              duration: Duration(seconds: 3),
+                        Column(
+                          children: [
+                            const Text(
+                              'Matter of Movement',
+                              textAlign: TextAlign.center,
+                              style: headingStyle,
                             ),
-                            FadeEffect(
-                              delay: Duration(seconds: 6),
-                              duration: Duration(seconds: 3),
+                            gapH32,
+                            VerticalAppWidget(
+                              onTap: url.launchMoMUrl,
+                              screenshotPath: 'images/MoM_tile_dark.png',
+                              height: mediaWidth < 750
+                                  ? (mediaWidth * 0.45) - 48
+                                  : (mediaWidth * 0.4) - 48,
                             ),
                           ],
-                          child: Column(
-                            children: [
-                              const Text(
-                                'Matter of Movement',
-                                textAlign: TextAlign.center,
-                                style: headingStyle,
-                              ),
-                              gapH32,
-                              VerticalAppWidget(
-                                onTap: url.launchMoMUrl,
-                                screenshotPath: 'images/MoM_tile_dark.png',
-                                height: mediaWidth < 750
-                                    ? (mediaWidth * 0.45) - 48
-                                    : (mediaWidth * 0.4) - 48,
-                              ),
-                            ],
-                          ),
-                        ),
+                        )
+                            .animate()
+                            .slideX(
+                              duration: const Duration(seconds: 3),
+                              delay: const Duration(seconds: 5),
+                            )
+                            .fade(
+                              duration: const Duration(seconds: 3),
+                              delay: const Duration(seconds: 5),
+                            ),
                         gapH32,
                         // Remove below SizedBox when another landscape app
                         // is added to the portfolio. This helps alignment
@@ -416,142 +381,139 @@ class PortfolioContent extends StatelessWidget {
                     Column(
                       children: [
                         gapH32,
-                        Animate(
-                          effects: const [
-                            SlideEffect(
-                              delay: Duration(seconds: 2),
-                              curve: Curves.easeIn,
-                              duration: Duration(seconds: 3),
+                        Column(
+                          children: [
+                            const Text(
+                              'Task Management App',
+                              textAlign: TextAlign.center,
+                              style: headingStyle,
                             ),
-                            FadeEffect(
-                              delay: Duration(seconds: 2),
-                              duration: Duration(seconds: 3),
+                            gapH32,
+                            VerticalAppWidget(
+                              onTap: () {
+                                showDialog(
+                                    context: context,
+                                    builder: (context) {
+                                      return AlertDialog(
+                                        title:
+                                            const Text('Task Management App'),
+                                        content: const Text(
+                                            'This app is currently in development.'),
+                                        actions: [
+                                          TextButton(
+                                            onPressed: () {
+                                              Navigator.of(context).pop();
+                                            },
+                                            child: const Text('Close'),
+                                          ),
+                                        ],
+                                      );
+                                    });
+                              },
+                              screenshotPath: 'images/planner.png',
+                              height: mediaWidth < 750
+                                  ? (mediaWidth * 0.45) - 48
+                                  : (mediaWidth * 0.4) - 48,
                             ),
                           ],
-                          child: Column(
-                            children: [
-                              const Text(
-                                'Task Management App',
-                                textAlign: TextAlign.center,
-                                style: headingStyle,
-                              ),
-                              gapH32,
-                              VerticalAppWidget(
-                                onTap: () {
-                                  showDialog(
-                                      context: context,
-                                      builder: (context) {
-                                        return AlertDialog(
-                                          title:
-                                              const Text('Task Management App'),
-                                          content: const Text(
-                                              'This app is currently in development.'),
-                                          actions: [
-                                            TextButton(
-                                              onPressed: () {
-                                                Navigator.of(context).pop();
-                                              },
-                                              child: const Text('Close'),
-                                            ),
-                                          ],
-                                        );
-                                      });
-                                },
-                                screenshotPath: 'images/planner.png',
-                                height: mediaWidth < 750
-                                    ? (mediaWidth * 0.45) - 48
-                                    : (mediaWidth * 0.4) - 48,
-                              ),
-                            ],
-                          ),
-                        ),
+                        )
+                            .animate()
+                            .slideX(
+                              duration: const Duration(seconds: 3),
+                              delay: const Duration(seconds: 2),
+                              // right to left
+                              begin: 0.5,
+                              end: 0,
+                            )
+                            .fade(
+                              duration: const Duration(seconds: 3),
+                              delay: const Duration(seconds: 2),
+                            ),
                         gapH32,
-                        Animate(
-                          effects: const [
-                            SlideEffect(
-                              delay: Duration(seconds: 4),
-                              curve: Curves.easeIn,
-                              duration: Duration(seconds: 3),
+                        Column(
+                          children: [
+                            const Text(
+                              'Brighter Tomorrow',
+                              textAlign: TextAlign.center,
+                              style: headingStyle,
                             ),
-                            FadeEffect(
-                              delay: Duration(seconds: 4),
-                              duration: Duration(seconds: 3),
+                            gapH32,
+                            VerticalAppWidget(
+                              onTap: url.launchBrighterTomorrowUrl,
+                              screenshotPath:
+                                  'images/brighter_tomorrow_tile.png',
+                              height: mediaWidth < 750
+                                  ? (mediaWidth * 0.45) - 48
+                                  : (mediaWidth * 0.4) - 48,
                             ),
                           ],
-                          child: Column(
-                            children: [
-                              const Text(
-                                'Brighter Tomorrow',
-                                textAlign: TextAlign.center,
-                                style: headingStyle,
-                              ),
-                              gapH32,
-                              VerticalAppWidget(
-                                onTap: url.launchBrighterTomorrowUrl,
-                                screenshotPath:
-                                    'images/brighter_tomorrow_tile.png',
-                                height: mediaWidth < 750
-                                    ? (mediaWidth * 0.45) - 48
-                                    : (mediaWidth * 0.4) - 48,
-                              ),
-                            ],
-                          ),
-                        ),
+                        )
+                            .animate()
+                            .slideX(
+                              duration: const Duration(seconds: 3),
+                              delay: const Duration(seconds: 4),
+                              // right to left
+                              begin: 0.5,
+                              end: 0,
+                            )
+                            .fade(
+                              duration: const Duration(seconds: 3),
+                              delay: const Duration(seconds: 4),
+                            ),
                         gapH32,
-                        Animate(
-                          effects: const [
-                            SlideEffect(
-                              delay: Duration(seconds: 5),
-                              curve: Curves.easeIn,
-                              duration: Duration(seconds: 3),
+                        Column(
+                          children: [
+                            const Text(
+                              'Digby',
+                              textAlign: TextAlign.center,
+                              style: headingStyle,
                             ),
-                            FadeEffect(
-                              delay: Duration(seconds: 5),
-                              duration: Duration(seconds: 3),
+                            gapH32,
+                            HorizontalAppWidget(
+                              onTap: url.launchDigbyAppStore,
+                              screenshotPath: 'images/digby_tile.png',
+                              width: mediaWidth < 750
+                                  ? (mediaWidth * 0.45) - 48
+                                  : (mediaWidth * 0.4) - 48,
                             ),
-                          ],
-                          child: Column(
-                            children: [
-                              const Text(
-                                'Digby',
-                                textAlign: TextAlign.center,
-                                style: headingStyle,
-                              ),
-                              gapH32,
-                              HorizontalAppWidget(
-                                onTap: url.launchDigbyAppStore,
-                                screenshotPath: 'images/digby_tile.png',
-                                width: mediaWidth < 750
-                                    ? (mediaWidth * 0.45) - 48
-                                    : (mediaWidth * 0.4) - 48,
-                              ),
-                              gapH16,
-                              VerticalAppWidget(
-                                screenshotPath: 'images/appstore.png',
-                                height: mediaWidth * 0.048,
-                                onTap: url.launchDigbyAppStore,
-                              ),
-                              gapH16,
-                              VerticalAppWidget(
-                                screenshotPath: 'images/playstore.png',
-                                height: mediaWidth * 0.048,
-                                onTap: url.launchDigbyUrl,
-                              ),
-                              gapH16,
-                              TextButton(
-                                onPressed: url.launchDigbyWebUrl,
-                                child: const Text(
-                                  'Play Digby in your browser',
-                                  style: TextStyle(
-                                    fontSize: 16.0,
-                                    color: colour,
-                                    decoration: TextDecoration.underline,
-                                  ),
+                            gapH16,
+                            VerticalAppWidget(
+                              screenshotPath: 'images/appstore.png',
+                              height: mediaWidth * 0.048,
+                              onTap: url.launchDigbyAppStore,
+                            ),
+                            gapH16,
+                            VerticalAppWidget(
+                              screenshotPath: 'images/playstore.png',
+                              height: mediaWidth * 0.048,
+                              onTap: url.launchDigbyUrl,
+                            ),
+                            gapH16,
+                            TextButton(
+                              onPressed: url.launchDigbyWebUrl,
+                              child: const Text(
+                                'Play Digby in your browser',
+                                style: TextStyle(
+                                  fontSize: 16.0,
+                                  color: colour,
+                                  decoration: TextDecoration.underline,
                                 ),
                               ),
-                            ],
-                          ),
-                        ),
+                            ),
+                          ],
+                        )
+                            .animate()
+                            .slideX(
+                              duration: const Duration(seconds: 3),
+                              delay: const Duration(seconds: 6),
+                              // right to left
+                              begin: 0.5,
+                              end: 0,
+                            )
+                            .fade(
+                              duration: const Duration(seconds: 3),
+                              delay: const Duration(seconds: 6),
+                            ),
                         gapH32,
                       ],
                     ),
