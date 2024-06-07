@@ -133,7 +133,9 @@ class PortfolioContent extends StatelessWidget {
                                         onPressed: () {
                                           Navigator.of(context).pop();
                                         },
-                                        child: const Text('Close'),
+                                        child: const Text('Close',
+                                            style:
+                                                TextStyle(color: Colors.white)),
                                       ),
                                     ],
                                   );
@@ -404,7 +406,9 @@ class PortfolioContent extends StatelessWidget {
                                             onPressed: () {
                                               Navigator.of(context).pop();
                                             },
-                                            child: const Text('Close'),
+                                            child: const Text('Close',
+                                                style: TextStyle(
+                                                    color: Colors.white)),
                                           ),
                                         ],
                                       );
