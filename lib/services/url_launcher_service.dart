@@ -21,6 +21,22 @@ class UrlLauncherService {
   final _digbyAppStore =
       Uri.parse('https://apps.apple.com/us/app/digby/id6480343595');
   final _booklistUrl = Uri.parse('https://sam-s-book-list.web.app/');
+  final _gridsPlayStore = Uri.parse(
+      'https://play.google.com/store/apps/details?id=com.o2tech.grids');
+  final _gridsAppStore =
+      Uri.parse('https://apps.apple.com/au/app/grids/id6670527700');
+
+  Future<void> launchGridsAppStore() async {
+    if (!await launchUrl(_gridsAppStore)) {
+      throw 'Could not launch $_gridsAppStore';
+    }
+  }
+
+  Future<void> launchGridsPlayStore() async {
+    if (!await launchUrl(_gridsPlayStore)) {
+      throw 'Could not launch $_gridsPlayStore';
+    }
+  }
 
   Future<void> launchPlansUrl() async {
     if (!await launchUrl(_plansUrl)) {

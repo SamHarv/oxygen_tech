@@ -45,6 +45,45 @@ class PortfolioContent extends StatelessWidget {
                     Column(
                       children: [
                         const Text(
+                          'grids.',
+                          textAlign: TextAlign.center,
+                          style: headingStyle,
+                        ),
+                        gapH32,
+                        VerticalAppWidget(
+                          onTap: url.launchGridsAppStore,
+                          screenshotPath: 'images/grids.png',
+                          height: mediaWidth < 750
+                              ? mediaWidth * 0.9
+                              : mediaWidth * 0.8,
+                        ),
+                        gapH16,
+                        VerticalAppWidget(
+                          screenshotPath: 'images/appstore.png',
+                          height: mediaWidth * 0.125,
+                          onTap: url.launchGridsAppStore,
+                        ),
+                        gapH16,
+                        VerticalAppWidget(
+                          screenshotPath: 'images/playstore.png',
+                          height: mediaWidth * 0.125,
+                          onTap: url.launchGridsPlayStore,
+                        ),
+                      ],
+                    )
+                        .animate()
+                        .slideX(
+                          duration: const Duration(seconds: 3),
+                          delay: const Duration(seconds: 2),
+                        )
+                        .fade(
+                          duration: const Duration(seconds: 3),
+                          delay: const Duration(seconds: 2),
+                        ),
+                    gapH32,
+                    Column(
+                      children: [
+                        const Text(
                           'Sam\'s Booklist',
                           textAlign: TextAlign.center,
                           style: headingStyle,
@@ -382,6 +421,45 @@ class PortfolioContent extends StatelessWidget {
                     gapW32,
                     Column(
                       children: [
+                        gapH32,
+                        Column(
+                          children: [
+                            const Text(
+                              'grids.',
+                              textAlign: TextAlign.center,
+                              style: headingStyle,
+                            ),
+                            gapH32,
+                            VerticalAppWidget(
+                              onTap: url.launchGridsAppStore,
+                              screenshotPath: 'images/grids.png',
+                              height: mediaWidth < 750
+                                  ? (mediaWidth * 0.45) - 48
+                                  : (mediaWidth * 0.4) - 48,
+                            ),
+                            gapH16,
+                            VerticalAppWidget(
+                              screenshotPath: 'images/appstore.png',
+                              height: mediaWidth * 0.048,
+                              onTap: url.launchGridsAppStore,
+                            ),
+                            gapH16,
+                            VerticalAppWidget(
+                              screenshotPath: 'images/playstore.png',
+                              height: mediaWidth * 0.048,
+                              onTap: url.launchGridsPlayStore,
+                            ),
+                          ],
+                        )
+                            .animate()
+                            .slideX(
+                              duration: const Duration(seconds: 3),
+                              delay: const Duration(seconds: 2),
+                            )
+                            .fade(
+                              duration: const Duration(seconds: 3),
+                              delay: const Duration(seconds: 2),
+                            ),
                         gapH32,
                         Column(
                           children: [
