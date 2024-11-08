@@ -45,10 +45,10 @@ class _HomePageState extends State<HomePage> {
       appBar: const CustomAppBarWidget(),
       body: Container(
         width: double.infinity,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           gradient: LinearGradient(
             colors: [
-              Colors.black45.withOpacity(0.7),
+              Colors.black45,
               Colors.black12,
             ],
             begin: Alignment.bottomRight,
@@ -67,22 +67,32 @@ class _HomePageState extends State<HomePage> {
               child: Column(
                 children: <Widget>[
                   gapH64,
-                  Animate(
-                    effects: const [
-                      SlideEffect(
-                        curve: Curves.easeIn,
-                        duration: Duration(seconds: 3),
+                  Stack(
+                    alignment: Alignment.center,
+                    children: [
+                      SizedBox(
+                        height: mediaWidth <= 750
+                            ? mediaWidth * 0.8 * 1.1979
+                            : mediaWidth * 0.4 * 1.1979,
                       ),
-                      FadeEffect(
-                        duration: Duration(seconds: 3),
+                      Animate(
+                        effects: const [
+                          SlideEffect(
+                            curve: Curves.easeIn,
+                            duration: Duration(seconds: 3),
+                          ),
+                          FadeEffect(
+                            duration: Duration(seconds: 3),
+                          ),
+                        ],
+                        child: Image.asset(
+                          "images/display_1.png",
+                          width: mediaWidth <= 750
+                              ? mediaWidth * 0.8
+                              : mediaWidth * 0.4,
+                        ),
                       ),
                     ],
-                    child: Image.asset(
-                      "images/display_1.png",
-                      width: mediaWidth <= 750
-                          ? mediaWidth * 0.8
-                          : mediaWidth * 0.4,
-                    ),
                   ),
                   gapH64,
                   DisplayBoxWidget(

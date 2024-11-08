@@ -455,6 +455,9 @@ class PortfolioContent extends StatelessWidget {
                             .slideX(
                               duration: const Duration(seconds: 3),
                               delay: const Duration(seconds: 2),
+                              // right to left
+                              begin: 0.5,
+                              end: 0,
                             )
                             .fade(
                               duration: const Duration(seconds: 3),
