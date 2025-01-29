@@ -58,9 +58,16 @@ class _HomePageState extends State<HomePage> {
         child: Stack(
           alignment: Alignment.center,
           children: [
-            Image.asset(
-              logo,
-              width: mediaWidth <= 750 ? mediaWidth * 0.8 : mediaWidth * 0.4,
+            Animate(
+              effects: const [
+                FadeEffect(
+                  duration: Duration(seconds: 2),
+                ),
+              ],
+              child: Image.asset(
+                logo,
+                width: mediaWidth <= 750 ? mediaWidth * 0.8 : mediaWidth * 0.4,
+              ),
             ),
             SingleChildScrollView(
               controller: context.scrollController,

@@ -6,7 +6,7 @@ class UrlLauncherService {
   final _moMUrl = Uri.parse('https://matterofmovement.com.au');
   final _digbyUrl = Uri.parse(
       'https://play.google.com/store/apps/details?id=com.samharvey.digby&pcampaignid=web_share');
-  final _digbyWebUrl = Uri.parse('https://digbygame.com.au');
+  final _digbyWebUrl = Uri.parse('https://digby-9696d.web.app');
   final _brighterTomorrowUrl = Uri.parse('https://brightertomorrow.com.au');
   final _youTubeUrl =
       Uri.parse('https://www.youtube.com/channel/UCO6fpaaJYCkVSZQIhA4Gi8Q');
